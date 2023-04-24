@@ -1,116 +1,268 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import Subscriptions from "@/components/Subscriptions"
+import { Video } from "@/typing"
 
-const inter = Inter({ subsets: ['latin'] })
+// async function getData(channelId: string) {
+//   const maxVideos = 10
+//   const res = await fetch(
+//     `https://www.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxVideos}`,
+//     { next: { revalidate: 3600 } }
+//   )
 
-export default function Home() {
+//   if (!res.ok) {
+//     // This will activate the closest `error.js` Error Boundary
+//     throw new Error("Failed to fetch data")
+//   }
+
+//   return res.json()
+// }
+
+const demoVideos: Video[] = [
+  {
+    id: {
+      videoId: "e0ccuvyVQpU",
+    },
+    snippet: {
+      publishedAt: "2023-04-23T18:00:13Z",
+      channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+      title: "فضل صيام 6 من شوال",
+      description:
+        "أهلا بكم في القناة الرسمية لفضيلة الشيخ د. عمر عبد الكافي، لمتابعة كل جديد يرجي الأشتراك في القناة و تفعيل زر الجرس.",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/e0ccuvyVQpU/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/e0ccuvyVQpU/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/e0ccuvyVQpU/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "عمر عبد الكافي",
+    },
+  },
+  {
+    id: {
+      videoId: "7ONdj8iV7zk",
+    },
+    snippet: {
+      publishedAt: "2023-04-22T17:00:07Z",
+      channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+      title: "حواري مع أحفادي , حفيدي يصف لي الجنة كما يتخيلها",
+      description:
+        "أهلا بكم في القناة الرسمية لفضيلة الشيخ د. عمر عبد الكافي، لمتابعة كل جديد يرجي الأشتراك في القناة و تفعيل زر الجرس.",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/7ONdj8iV7zk/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/7ONdj8iV7zk/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/7ONdj8iV7zk/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "عمر عبد الكافي",
+    },
+  },
+  {
+    id: {
+      videoId: "su3Qwu12ZZo",
+    },
+    snippet: {
+      publishedAt: "2023-04-20T18:15:04Z",
+      channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+      title: "عيدنا الحقيقي",
+      description: "",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/su3Qwu12ZZo/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/su3Qwu12ZZo/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/su3Qwu12ZZo/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "عمر عبد الكافي",
+    },
+  },
+  {
+    id: {
+      videoId: "jir8CsFLoAE",
+    },
+    snippet: {
+      publishedAt: "2023-04-20T15:00:29Z",
+      channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+      title: "الوعد الحق الجزء الثاني (28) | أخذ الحقوق",
+      description:
+        "أهلا بكم في القناة الرسمية لفضيلة الشيخ د. عمر عبد الكافي، لمتابعة كل جديد يرجي الأشتراك في القناة و تفعيل زر الجرس.",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/jir8CsFLoAE/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/jir8CsFLoAE/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/jir8CsFLoAE/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "عمر عبد الكافي",
+    },
+  },
+  {
+    id: {
+      videoId: "_oihvEAi664",
+    },
+    snippet: {
+      publishedAt: "2023-04-19T15:00:33Z",
+      channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+      title: "الوعد الحق الجزء الثاني (27) | الذين يظلهم الله في ظله",
+      description:
+        "أهلا بكم في القناة الرسمية لفضيلة الشيخ د. عمر عبد الكافي، لمتابعة كل جديد يرجي الأشتراك في القناة و تفعيل زر الجرس.",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/_oihvEAi664/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/_oihvEAi664/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/_oihvEAi664/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "عمر عبد الكافي",
+    },
+  },
+  {
+    id: {
+      videoId: "cCRpGJtQxU4",
+    },
+    snippet: {
+      publishedAt: "2023-04-18T19:00:14Z",
+      channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+      title: "لماذا لا تصلي؟",
+      description: "",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/cCRpGJtQxU4/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/cCRpGJtQxU4/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/cCRpGJtQxU4/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "عمر عبد الكافي",
+    },
+  },
+  {
+    id: {
+      videoId: "b_YMRJSqU4I",
+    },
+    snippet: {
+      publishedAt: "2023-04-18T15:00:21Z",
+      channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+      title: "الوعد الحق الجزء الثاني (26) | هل يقبل الله الأعذار؟",
+      description:
+        "أهلا بكم في القناة الرسمية لفضيلة الشيخ د. عمر عبد الكافي، لمتابعة كل جديد يرجي الأشتراك في القناة و تفعيل زر الجرس.",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/b_YMRJSqU4I/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/b_YMRJSqU4I/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/b_YMRJSqU4I/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "عمر عبد الكافي",
+    },
+  },
+  {
+    id: {
+      videoId: "boawx8Frhuw",
+    },
+    snippet: {
+      publishedAt: "2023-04-17T15:00:21Z",
+      channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+      title: "دعاء ليلة القدر 1444/2023 عمر عبد الكافي",
+      description:
+        "أهلا بكم في القناة الرسمية لفضيلة الشيخ د. عمر عبد الكافي، لمتابعة كل جديد يرجي الأشتراك في القناة و تفعيل زر الجرس.",
+      thumbnails: {
+        default: {
+          url: "https://i.ytimg.com/vi/boawx8Frhuw/default.jpg",
+          width: 120,
+          height: 90,
+        },
+        medium: {
+          url: "https://i.ytimg.com/vi/boawx8Frhuw/mqdefault.jpg",
+          width: 320,
+          height: 180,
+        },
+        high: {
+          url: "https://i.ytimg.com/vi/boawx8Frhuw/hqdefault.jpg",
+          width: 480,
+          height: 360,
+        },
+      },
+      channelTitle: "عمر عبد الكافي",
+    },
+  },
+]
+export default async function Home() {
+  // UCKUOmGXE9Ytlc2EzpGqimtw
+  // const videos = await getData("UCKUOmGXE9Ytlc2EzpGqimtw")
+  // console.log(videos)
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <main className="">
+      <Subscriptions videos={demoVideos} />
     </main>
   )
 }
