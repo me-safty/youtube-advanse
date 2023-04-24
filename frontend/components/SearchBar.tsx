@@ -9,7 +9,7 @@ const SearchBar = () => {
   return (
     <div className="flex rounded-full text-white overflow-hidden">
       <input
-        className="bg-[#212121] px-4 py-2 outline-none"
+        className="bg-[#121212] px-4 py-2 outline-none"
         type="text"
         name="search"
         value={inputValue}
@@ -17,7 +17,7 @@ const SearchBar = () => {
         placeholder="Search..."
       />
       <button
-        className="bg-[#2c2c2c] px-4 rounded-e-full"
+        className="bg-[#313131] px-4 rounded-e-full"
         onClick={() => router.push(`/search/${inputValue}`)}
       >
         S
