@@ -1,4 +1,4 @@
-import Subscriptions from "@/components/Subscriptions"
+import Videos from "@/components/Videos"
 import { Video } from "@/typing"
 
 // async function getData(channelId: string) {
@@ -262,7 +262,7 @@ export default async function Home() {
   // console.log(videos)
   return (
     <main className="">
-      <Subscriptions videos={demoVideos} />
+      <Videos videos={demoVideos} />
     </main>
   )
 }

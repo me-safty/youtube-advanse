@@ -1,11 +1,11 @@
 import { Video } from "@/typing"
 import VideoCard from "./VideoCard"
 
-interface SubscriptionsProps {
+interface VideosProps {
   videos: Video[]
 }
 
-const Subscriptions = ({ videos }: SubscriptionsProps) => {
+const Videos = ({ videos }: VideosProps) => {
   return (
     <div className="container">
       <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 w-full">
@@ -17,4 +17,4 @@ const Subscriptions = ({ videos }: SubscriptionsProps) => {
   )
 }
 
-export default Subscriptions
+export default Videos

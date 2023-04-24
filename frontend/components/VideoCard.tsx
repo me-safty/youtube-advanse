@@ -14,8 +14,8 @@ const VideoCard = ({ video }: VideoCardProps) => {
           className="w-full object-cover"
           src={video.snippet.thumbnails.high.url}
           alt={video.snippet.title}
-          width={video.snippet.thumbnails.high.width}
-          height={video.snippet.thumbnails.high.height}
+          width={video.snippet.thumbnails.high.width || "480"}
+          height={video.snippet.thumbnails.high.height || "360"}
         />
         <p
           className="font-semibold my-3 overflow-hidden text-white"
