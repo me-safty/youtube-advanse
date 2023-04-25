@@ -1,6 +1,6 @@
 export interface Video {
 	id: {
-		kind?: "youtube#video" | "youtube#playlist" | "youtube#channel"
+		kind?: "youtube#video" | "youtube#playlistItem"
 		videoId: string
 	}
 	snippet: {
@@ -26,6 +26,17 @@ export interface Video {
 			}
 		}
 		channelTitle: string
+		position?: number
+		resourceId?: {
+			kind: string
+			videoId: string
+		}
+	}
+	statistics?: {
+		viewCount: string
+		likeCount: string
+		favoriteCount: string
+		commentCount: string
 	}
 }
 
@@ -129,43 +140,42 @@ export interface Video {
 // }
 
 export interface VideoDetails {
-	items: [
-		{
-			kind: "youtube#video" | "youtube#playlist" | "youtube#channel"
-			id: string
-			snippet: {
-				publishedAt: string
-				channelId: string
-				title: string
-				description: string
-				thumbnails: {
-					default: {
-						url: string
-						width: number
-						height: number
-					}
-					medium: {
-						url: string
-						width: number
-						height: number
-					}
-					high: {
-						url: string
-						width: number
-						height: number
-					}
-				}
-				channelTitle: string
-			}
-			statistics: {
-				viewCount: string
-				likeCount: string
-				favoriteCount: string
-				commentCount: string
-			}
-		}
-	]
+	items: Video[]
 }
+
+// export interface Video {
+// 	id: string
+// 	snippet: {
+// 		publishedAt: string
+// 		channelId: string
+// 		title: string
+// 		description: string
+// 		thumbnails: {
+// 			default: {
+// 				url: string
+// 				width: number
+// 				height: number
+// 			}
+// 			medium: {
+// 				url: string
+// 				width: number
+// 				height: number
+// 			}
+// 			high: {
+// 				url: string
+// 				width: number
+// 				height: number
+// 			}
+// 		}
+// 		channelTitle: string
+// 	}
+// 	statistics: {
+// 		viewCount: string
+// 		likeCount: string
+// 		favoriteCount: string
+// 		commentCount: string
+// 	}
+// }
 
 export interface RapidVideoDetails {
 	type: "video"
@@ -335,4 +345,69 @@ export interface FormatDetails {
 	fps: number
 	projectionType: string
 	averageBitrate: number
+}
+
+export interface Channel {
+	id: {
+		kind: "youtube#channel"
+		channelId: string
+	}
+	snippet: {
+		publishedAt: string
+		channelId: string
+		title: string
+		description: string
+		thumbnails: {
+			default: {
+				url: string
+			}
+			medium: {
+				url: string
+			}
+			high: {
+				url: string
+			}
+		}
+		channelTitle: string
+	}
+}
+
+export interface PlayList {
+	id: {
+		kind: "youtube#playlist"
+		playlistId: string
+	}
+	snippet: {
+		publishedAt: string
+		channelId: string
+		title: string
+		description: string
+		thumbnails: {
+			default: {
+				url: string
+				width: number
+				height: number
+			}
+			medium: {
+				url: string
+				width: number
+				height: number
+			}
+			high: {
+				url: string
+				width: number
+				height: number
+			}
+		}
+		channelTitle: string
+	}
+}
+
+export interface SearchDetails {
+	nextPageToken: string
+	pageInfo: {
+		totalResults: number
+		resultsPerPage: number
+	}
+	items: Channel[] | Video[]
 }

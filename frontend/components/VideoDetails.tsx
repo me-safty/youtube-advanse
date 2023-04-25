@@ -1,19 +1,19 @@
 "use client"
 
-import { VideoDetails } from "@/typing"
+import { Video } from "@/typing"
 import Link from "next/link"
 import { useState } from "react"
 
 interface VideoDetailsPageProps {
-	videoDetails: VideoDetails
+	video: Video
 	id: string
 }
 
-const VideoDetailsPage = ({ videoDetails, id }: VideoDetailsPageProps) => {
+const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 	const [isExpanded, setExpanded] = useState<boolean>(false)
 
 	return (
-		<div>
+		<div className="container">
 			<div className="w-full aspect-w-16 h-[700px] mt-5">
 				<iframe
 					className="w-full h-[700px]"
@@ -24,12 +24,10 @@ const VideoDetailsPage = ({ videoDetails, id }: VideoDetailsPageProps) => {
 				></iframe>
 			</div>
 			<div className="mx-4 text-white">
-				<h1 className="text-white text-3xl my-5">
-					{videoDetails.items[0].snippet.title}
-				</h1>
-				<Link href={`/channels/${videoDetails.items[0].snippet.channelId}`}>
+				<h1 className="text-white text-3xl my-5">{video?.snippet.title}</h1>
+				<Link href={`/channels/${video.snippet.channelId}`}>
 					<h2 className="my-3 text-gray-500 text-xl">
-						{videoDetails.items[0].snippet.channelTitle}
+						{video.snippet.channelTitle}
 					</h2>
 				</Link>
 				<div className="p-4 rounded-xl bg-white bg-opacity-5">
@@ -39,22 +37,14 @@ const VideoDetailsPage = ({ videoDetails, id }: VideoDetailsPageProps) => {
 						</div>
 					</Link>
 					<p className="text-gray-400 mb-2 text-sm font-semibold">
-						{new Date(
-							videoDetails.items[0].snippet.publishedAt
-						).toLocaleString()}
+						{new Date(video.snippet.publishedAt).toLocaleString()}
 						<span className="">
 							{" | "}
-							{Number(
-								videoDetails.items[0].statistics.viewCount
-							).toLocaleString()}{" "}
-							views
+							{Number(video?.statistics?.viewCount).toLocaleString()} views
 						</span>
 						<span className="span">
 							{" | "}
-							{Number(
-								videoDetails.items[0].statistics.likeCount
-							).toLocaleString()}{" "}
-							likes
+							{Number(video?.statistics?.likeCount).toLocaleString()} likes
 						</span>
 					</p>
 					<p
@@ -70,7 +60,7 @@ const VideoDetailsPage = ({ videoDetails, id }: VideoDetailsPageProps) => {
 								: {}
 						}
 					>
-						{videoDetails.items[0].snippet.description}
+						{video.snippet.description}
 					</p>
 					<button
 						className="text-cyan-700"

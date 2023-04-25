@@ -65,11 +65,11 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 			},
 		],
 	}
-
+	console.log(videoDetails.items[0])
 	return (
 		<div className="container">
 			{/* @ts-ignore */}
-			<VideoDetailsPage videoDetails={videoDetails} id={id} />
+			<VideoDetailsPage videoDetails={videoDetails.items[0]} id={id} />
 		</div>
 	)
 }
