@@ -1,32 +1,32 @@
 export interface Video {
-  id: {
-    kind?: "youtube#video" | "youtube#playlist" | "youtube#channel"
-    videoId: string
-  }
-  snippet: {
-    publishedAt: string
-    channelId: string
-    title: string
-    description: string
-    thumbnails: {
-      default: {
-        url: string
-        width: number
-        height: number
-      }
-      medium: {
-        url: string
-        width: number
-        height: number
-      }
-      high: {
-        url: string
-        width: number
-        height: number
-      }
-    }
-    channelTitle: string
-  }
+	id: {
+		kind?: "youtube#video" | "youtube#playlist" | "youtube#channel"
+		videoId: string
+	}
+	snippet: {
+		publishedAt: string
+		channelId: string
+		title: string
+		description: string
+		thumbnails: {
+			default: {
+				url: string
+				width: number
+				height: number
+			}
+			medium: {
+				url: string
+				width: number
+				height: number
+			}
+			high: {
+				url: string
+				width: number
+				height: number
+			}
+		}
+		channelTitle: string
+	}
 }
 
 // {
@@ -129,118 +129,118 @@ export interface Video {
 // }
 
 export interface VideoDetails {
-  items: [
-    {
-      kind: "youtube#video" | "youtube#playlist" | "youtube#channel"
-      id: string
-      snippet: {
-        publishedAt: string
-        channelId: string
-        title: string
-        description: string
-        thumbnails: {
-          default: {
-            url: string
-            width: number
-            height: number
-          }
-          medium: {
-            url: string
-            width: number
-            height: number
-          }
-          high: {
-            url: string
-            width: number
-            height: number
-          }
-        }
-        channelTitle: string
-      }
-      statistics: {
-        viewCount: string
-        likeCount: string
-        favoriteCount: string
-        commentCount: string
-      }
-    }
-  ]
+	items: [
+		{
+			kind: "youtube#video" | "youtube#playlist" | "youtube#channel"
+			id: string
+			snippet: {
+				publishedAt: string
+				channelId: string
+				title: string
+				description: string
+				thumbnails: {
+					default: {
+						url: string
+						width: number
+						height: number
+					}
+					medium: {
+						url: string
+						width: number
+						height: number
+					}
+					high: {
+						url: string
+						width: number
+						height: number
+					}
+				}
+				channelTitle: string
+			}
+			statistics: {
+				viewCount: string
+				likeCount: string
+				favoriteCount: string
+				commentCount: string
+			}
+		}
+	]
 }
 
 export interface RapidVideoDetails {
-  type: "video"
-  video: {
-    author: {
-      avatar: [
-        {
-          height: number
-          url: string
-          width: number
-        }
-      ]
-      channelId: string
-      title: string
-    }
-    descriptionSnippet: string
-    movingThumbnails: [
-      {
-        height: number
-        url: string
-        width: number
-      }
-    ]
-    publishedTimeText: string
-    stats: {
-      views: number
-    }
-    thumbnails: [
-      {
-        height: number
-        url: string
-        width: number
-      },
-      {
-        height: number
-        url: string
-        width: number
-      }
-    ]
-    title: string
-    videoId: string
-  }
+	type: "video"
+	video: {
+		author: {
+			avatar: [
+				{
+					height: number
+					url: string
+					width: number
+				}
+			]
+			channelId: string
+			title: string
+		}
+		descriptionSnippet: string
+		movingThumbnails: [
+			{
+				height: number
+				url: string
+				width: number
+			}
+		]
+		publishedTimeText: string
+		stats: {
+			views: number
+		}
+		thumbnails: [
+			{
+				height: number
+				url: string
+				width: number
+			},
+			{
+				height: number
+				url: string
+				width: number
+			}
+		]
+		title: string
+		videoId: string
+	}
 }
 
 export interface RapidChannelId {
-  channel: {
-    avatar: [
-      {
-        height: 88
-        url: "https://yt3.ggpht.com/-qCvx3y42iXp9cMNe5Yx3aoR2lL8TFxsrLShyBLuXOE4tY56kt_bPceyvPw95rpUqgKqI8zDBe4=s88-c-k-c0x00ffffff-no-rj-mo"
-        width: 88
-      },
-      {
-        height: 176
-        url: "https://yt3.ggpht.com/-qCvx3y42iXp9cMNe5Yx3aoR2lL8TFxsrLShyBLuXOE4tY56kt_bPceyvPw95rpUqgKqI8zDBe4=s176-c-k-c0x00ffffff-no-rj-mo"
-        width: 176
-      }
-    ]
-    badges: [
-      {
-        text: "Verified"
-        type: "VERIFIED_CHANNEL"
-      }
-    ]
-    canonicalBaseUrl: "/@ElzeroWebSchool"
-    channelId: "UCSNkfKl4cU-55Nm-ovsvOHQ"
-    descriptionSnippet: "Life Is Short, Start Learning."
-    stats: {
-      subscribers: 1150000
-      subscribersText: "1.15M subscribers"
-    }
-    title: "Elzero Web School"
-    username: "@ElzeroWebSchool"
-  }
-  type: "channel"
+	channel: {
+		avatar: [
+			{
+				height: 88
+				url: "https://yt3.ggpht.com/-qCvx3y42iXp9cMNe5Yx3aoR2lL8TFxsrLShyBLuXOE4tY56kt_bPceyvPw95rpUqgKqI8zDBe4=s88-c-k-c0x00ffffff-no-rj-mo"
+				width: 88
+			},
+			{
+				height: 176
+				url: "https://yt3.ggpht.com/-qCvx3y42iXp9cMNe5Yx3aoR2lL8TFxsrLShyBLuXOE4tY56kt_bPceyvPw95rpUqgKqI8zDBe4=s176-c-k-c0x00ffffff-no-rj-mo"
+				width: 176
+			}
+		]
+		badges: [
+			{
+				text: "Verified"
+				type: "VERIFIED_CHANNEL"
+			}
+		]
+		canonicalBaseUrl: "/@ElzeroWebSchool"
+		channelId: "UCSNkfKl4cU-55Nm-ovsvOHQ"
+		descriptionSnippet: "Life Is Short, Start Learning."
+		stats: {
+			subscribers: 1150000
+			subscribersText: "1.15M subscribers"
+		}
+		title: "Elzero Web School"
+		username: "@ElzeroWebSchool"
+	}
+	type: "channel"
 }
 
 // {
@@ -288,3 +288,51 @@ export interface RapidChannelId {
 //   }
 //   type: "playlist"
 // }
+
+export interface DownloadDetails {
+	id: string
+	title: string
+	lengthSeconds: string
+	channelTitle: string
+	channelId: string
+	description: string
+	thumbnail: [
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		}
+	]
+	adaptiveFormats: FormatDetails[]
+}
+
+export interface FormatDetails {
+	itag: number
+	url: string
+	mimeType: string
+	bitrate: number
+	width: number
+	height: number
+	qualityLabel: string
+	approxDurationMs: string
+	contentLength: string
+	quality: string
+	fps: number
+	projectionType: string
+	averageBitrate: number
+}
