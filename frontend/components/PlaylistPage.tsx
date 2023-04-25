@@ -10,7 +10,7 @@ const PlaylistPage = ({ playlistVideos }: PlaylistPageProps) => {
 	return (
 		<div className="container flex flex-col gap-5">
 			{playlistVideos.map((video) => (
-				<div className="flex items-center gap-5">
+				<div className="flex items-center gap-5" key={video.id.videoId}>
 					<Link href={`/videos/${video.snippet.resourceId?.videoId}`}>
 						<Image
 							className="object-cover rounded-xl min-w-[350px] max-h-[250px]"

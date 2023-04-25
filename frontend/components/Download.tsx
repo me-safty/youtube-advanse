@@ -33,7 +33,9 @@ const Download = ({ videoDownloadDetails }: DownloadProps) => {
 				<select value={selectedOption} onChange={handleSelectChange}>
 					<option value="">-- Please select --</option>
 					{videoUrls.map((e) => (
-						<option value={e.url}>{e.qualityLabel}</option>
+						<option key={e.url} value={e.url}>
+							{e.qualityLabel}
+						</option>
 					))}
 				</select>
 				{selectedOption && (
