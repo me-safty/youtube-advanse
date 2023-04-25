@@ -11,7 +11,7 @@ const Videos = ({ data }: FeedProps) => {
 	console.log(data)
 	return (
 		<div className="container">
-			<div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-3 w-full">
+			<div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 py-5 w-full">
 				{data.map((d) =>
 					d.id.kind === "youtube#video" ? (
 						<VideoCard key={d.id.videoId} video={d as Video} />

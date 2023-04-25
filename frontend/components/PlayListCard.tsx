@@ -9,9 +9,9 @@ const PlayListCard = ({ playlist }: PlayListCardProps) => {
 	return (
 		<div>
 			<Link href={`/playlist/${playlist.id.playlistId}`}>
-				<div className="relative w-full">
+				<div className="relative w-full rounded-xl overflow-hidden">
 					<Image
-						className="w-full object-cover"
+						className="w-full object-cover max-h-[150px]"
 						src={playlist.snippet.thumbnails.high.url}
 						alt={playlist.snippet.title}
 						width={playlist.snippet.thumbnails.high.width || "480"}
@@ -22,7 +22,7 @@ const PlayListCard = ({ playlist }: PlayListCardProps) => {
 					</div>
 				</div>
 				<p
-					className="font-semibold my-3 overflow-hidden text-white"
+					className="font-semibold my-1 overflow-hidden text-white"
 					style={{
 						height: "calc(2 * 1rem * 1.50)",
 						display: "-webkit-box",
@@ -35,7 +35,7 @@ const PlayListCard = ({ playlist }: PlayListCardProps) => {
 			</Link>
 			<Link href={`/channels/${playlist.snippet.channelId}`}>
 				<p
-					className="font-semibold text-sm my-3 overflow-hidden text-gray-400"
+					className="font-semibold text-sm mb-1 overflow-hidden text-gray-400"
 					style={{
 						height: "calc(1 * 1rem * 1.25)",
 						display: "-webkit-box",

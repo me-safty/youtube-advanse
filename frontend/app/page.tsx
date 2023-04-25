@@ -7,12 +7,6 @@ import { Video } from "@/typing"
 //     `https://www.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxVideos}`,
 //     { next: { revalidate: 3600 } }
 //   )
-
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data")
-//   }
-
 //   return res.json()
 // }
 

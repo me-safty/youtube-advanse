@@ -139,9 +139,9 @@ export interface Video {
 //   }
 // }
 
-export interface VideoDetails {
-	items: Video[]
-}
+// export interface VideoDetails {
+// 	items: Video[]
+// }
 
 // export interface Video {
 // 	id: string
@@ -369,6 +369,49 @@ export interface Channel {
 			}
 		}
 		channelTitle: string
+	}
+}
+
+export interface ChannelDetails {
+	kind: "youtube#channel"
+	id: string
+	snippet: {
+		title: string
+		description: string
+		customUrl: string
+		publishedAt: string
+		thumbnails: {
+			default: {
+				url: string
+				width: number
+				height: number
+			}
+			medium: {
+				url: string
+				width: number
+				height: number
+			}
+			high: {
+				url: string
+				width: number
+				height: number
+			}
+		}
+	}
+	contentDetails: {
+		relatedPlaylists: {
+			uploads: string
+		}
+	}
+	statistics: {
+		viewCount: string
+		subscriberCount: string
+		videoCount: string
+	}
+	brandingSettings: {
+		image: {
+			bannerExternalUrl: string
+		}
 	}
 }
 

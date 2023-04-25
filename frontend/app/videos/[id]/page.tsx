@@ -1,5 +1,5 @@
 import VideoDetailsPage from "@/components/VideoDetails"
-import { VideoDetails } from "@/typing"
+// import { VideoDetails } from "@/typing"
 
 // async function getData(videoId: string) {
 //   const res = await fetch(
@@ -15,17 +15,11 @@ import { VideoDetails } from "@/typing"
 //       },
 //     }
 //   )
-
-//   if (!res.ok) {
-//     // This will activate the closest `error.js` Error Boundary
-//     throw new Error("Failed to fetch data")
-//   }
-
 //   return res.json()
 // }
 
 const page = async ({ params: { id } }: { params: { id: string } }) => {
-	// const videoDetails: VideoDetails = await getData(id)
+	// const videoDetails = await getData(id)
 	const videoDetails = {
 		items: [
 			{

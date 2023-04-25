@@ -8,12 +8,12 @@ interface PlaylistPageProps {
 
 const PlaylistPage = ({ playlistVideos }: PlaylistPageProps) => {
 	return (
-		<div className="container flex flex-col gap-5">
+		<div className="container flex flex-col gap-5 my-5">
 			{playlistVideos.map((video) => (
 				<div className="flex items-center gap-5" key={video.id.videoId}>
 					<Link href={`/videos/${video.snippet.resourceId?.videoId}`}>
 						<Image
-							className="object-cover rounded-xl min-w-[350px] max-h-[250px]"
+							className="object-cover rounded-xl min-w-[300px] max-w-[300px] max-h-[150px]"
 							src={video.snippet.thumbnails.high.url}
 							alt={video.snippet.title}
 							width={"480"}
