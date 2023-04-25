@@ -11,7 +11,6 @@ interface VideoDetailsPageProps {
 
 const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 	const [isExpanded, setExpanded] = useState<boolean>(false)
-
 	return (
 		<div className="container">
 			<div className="w-full aspect-w-16 h-[700px] mt-5">
@@ -24,7 +23,7 @@ const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 				></iframe>
 			</div>
 			<div className="mx-4 text-white">
-				<h1 className="text-white text-3xl my-5">{video?.snippet.title}</h1>
+				<h1 className="text-white text-3xl my-5">{video.snippet.title}</h1>
 				<Link href={`/channels/${video.snippet.channelId}`}>
 					<h2 className="my-3 text-gray-500 text-xl">
 						{video.snippet.channelTitle}
