@@ -1,25 +1,26 @@
 import VideoDetailsPage from "@/components/VideoDetails"
-// import { VideoDetails } from "@/typing"
+import { notFound } from "next/navigation"
 
 // async function getData(videoId: string) {
-//   const res = await fetch(
-//     `https://youtube-v31.p.rapidapi.com/videos?part=contentDetails%2Csnippet%2Cstatistics&id=${videoId}`,
-//     {
-//       cache: "no-store",
-//       method: "GET",
-//       // @ts-ignore
-//       headers: {
-//         "content-type": "application/octet-stream",
-//         "X-RapidAPI-Key": process.env.RAPID_API_KEY,
-//         "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
-//       },
-//     }
-//   )
-//   return res.json()
+// 	const res = await fetch(
+// 		`https://youtube-v31.p.rapidapi.com/videos?part=contentDetails%2Csnippet%2Cstatistics&id=${videoId}`,
+// 		{
+// 			cache: "no-store",
+// 			method: "GET",
+// 			// @ts-ignore
+// 			headers: {
+// 				"content-type": "application/octet-stream",
+// 				"X-RapidAPI-Key": process.env.RAPID_API_KEY,
+// 				"X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+// 			},
+// 		}
+// 	)
+// 	return res.json()
 // }
 
 const page = async ({ params: { id } }: { params: { id: string } }) => {
 	// const videoDetails = await getData(id)
+	// if (!videoDetails.items[0]) return notFound()
 	const videoDetails = {
 		items: [
 			{
@@ -59,12 +60,11 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 			},
 		],
 	}
-	console.log(videoDetails.items[0])
 	return (
-		<div className="container">
+		<main>
 			{/* @ts-ignore */}
 			<VideoDetailsPage video={videoDetails.items[0]} id={id} />
-		</div>
+		</main>
 	)
 }
 

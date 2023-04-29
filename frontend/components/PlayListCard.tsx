@@ -8,7 +8,11 @@ interface PlayListCardProps {
 const PlayListCard = ({ playlist }: PlayListCardProps) => {
 	return (
 		<div>
-			<Link href={`/playlist/${playlist.id.playlistId}`}>
+			<Link
+				href={`/playlist/${
+					playlist.id.playlistId || (playlist.id as unknown as string)
+				}`}
+			>
 				<div className="relative w-full rounded-xl overflow-hidden">
 					<Image
 						className="w-full object-cover max-h-[150px]"
@@ -24,7 +28,7 @@ const PlayListCard = ({ playlist }: PlayListCardProps) => {
 				<p
 					className="font-semibold my-1 overflow-hidden text-white"
 					style={{
-						height: "calc(2 * 1rem * 1.50)",
+						// height: "calc(2 * 1rem * 1.50)",
 						display: "-webkit-box",
 						WebkitBoxOrient: "vertical",
 						WebkitLineClamp: "2",

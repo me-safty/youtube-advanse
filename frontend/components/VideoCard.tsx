@@ -20,7 +20,7 @@ const VideoCard = ({ video }: VideoCardProps) => {
 				<p
 					className="font-semibold my-1 overflow-hidden text-white"
 					style={{
-						height: "calc(2 * 1rem * 1.50)",
+						// height: "calc(2 * 1rem * 1.50)",
 						display: "-webkit-box",
 						WebkitBoxOrient: "vertical",
 						WebkitLineClamp: "2",

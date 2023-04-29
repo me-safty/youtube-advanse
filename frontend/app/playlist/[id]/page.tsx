@@ -1,4 +1,5 @@
 import PlaylistPage from "@/components/PlaylistPage"
+import { notFound } from "next/navigation"
 
 async function getData(playlistId: string) {
 	const maxVideos = 35
@@ -20,6 +21,7 @@ async function getData(playlistId: string) {
 
 const page = async ({ params: { id } }: { params: { id: string } }) => {
 	const playlistData = await getData(id)
+	if (!playlistData.items[0]) return notFound()
 	return <PlaylistPage playlistVideos={playlistData.items} />
 }
 

@@ -15,10 +15,13 @@ const Videos = ({ data }: FeedProps) => {
 				{data.map((d) =>
 					d.id.kind === "youtube#video" ? (
 						<VideoCard key={d.id.videoId} video={d as Video} />
-					) : d.id.kind === "youtube#playlist" ? (
-						<PlayListCard key={d.id.playlistId} playlist={d as PlayList} />
+					) : d.id.kind || d.kind === "youtube#playlist" ? (
+						<PlayListCard
+							key={d.snippet.channelTitle}
+							playlist={d as PlayList}
+						/>
 					) : d.id.kind === "youtube#channel" ? (
-						<ChannelCard key={d.id.channelId} channel={d as Channel} />
+						<ChannelCard key={d.snippet.channelId} channel={d as Channel} />
 					) : undefined
 				)}
 			</div>

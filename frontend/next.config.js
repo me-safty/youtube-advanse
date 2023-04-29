@@ -4,7 +4,12 @@ const nextConfig = {
 		appDir: true,
 	},
 	images: {
-		domains: ["i.ytimg.com", "yt3.ggpht.com", "i.ibb.co"],
+		domains: [
+			"i.ytimg.com",
+			"yt3.ggpht.com",
+			"i.ibb.co",
+			"yt3.googleusercontent.com",
+		],
 	},
 }
 

@@ -1,9 +1,11 @@
+import ChannelPage from "@/components/ChannelPage"
 import Feed from "@/components/Feed"
+import { notFound } from "next/navigation"
 
 // async function getChannelData(channelId: string) {
 // 	const res = await fetch(
 // 		`https://youtube.googleapis.com/youtube/v3/channels?part=contentDetails%2Csnippet%2Cstatistics%2CbrandingSettings&id=${channelId}&key=${process.env.YOUTUBE_API_KEY}`,
-// 		{ cache: "no-store" }
+// 		{ next: { revalidate: 1000 } }
 // 	)
 // 	return res.json()
 // }
@@ -12,16 +14,32 @@ import Feed from "@/components/Feed"
 // 	const maxVideos = 30
 // 	const res = await fetch(
 // 		`https://www.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxVideos}`,
-// 		{ cache: "no-cache" }
+// 		{ next: { revalidate: 1000 } }
+// 	)
+// 	return res.json()
+// }
+
+// async function getChannelPlaylists(channelId: string) {
+// 	const maxNum = 30
+// 	const res = await fetch(
+// 		`https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2Cplayer%2CcontentDetails&channelId=${channelId}&maxResults=${maxNum}&key=${process.env.YOUTUBE_API_KEY}`,
+// 		// `https://www.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxVideos}`,
+// 		{ next: { revalidate: 1000 } }
 // 	)
 // 	return res.json()
 // }
 
 const page = async ({ params: { id } }: { params: { id: string } }) => {
-	// const channelData = getChannelData(id)
 	// const channelVideos = getChannelVideos(id)
-
-	// const [data, videos] = await Promise.all([channelData, channelVideos])
+	// const channelPlaylists = getChannelPlaylists(id)
+	// const channelData = getChannelData(id)
+	// const [videos, playlists, data] = await Promise.all([
+	// 	channelVideos,
+	// 	channelPlaylists,
+	// 	channelData,
+	// ])
+	// if (!videos.items[0] || !playlists.items[0] || !data.items[0])
+	// 	return notFound()
 
 	const data = {
 		kind: "youtube#channelListResponse",
@@ -30,7 +48,6 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 		items: [
 			{
 				kind: "youtube#channel",
-				etag: "huJuBl4nk06mcszX67uD-U0fJAQ",
 				id: "UCKUOmGXE9Ytlc2EzpGqimtw",
 				snippet: {
 					title: "عمر عبد الكافي",
@@ -55,12 +72,6 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 							height: 800,
 						},
 					},
-					localized: {
-						title: "عمر عبد الكافي",
-						description:
-							"أهلا و سهلا بكم في القناة الرسمية لفضيلة الشيخ الدكتور عمر عبدالكافي ستجدون هنا معظم البرامج التلفزيونية و التسجيلات الخاصة و خطب الجمعة المصورة\nWelcome to Dr. Omar Abdelkafys' official YouTube Channel.\n\nHere you'll find most of Dr. Omar Abdelkafys' TV programs and video recordings.",
-					},
-					country: "AE",
 				},
 				contentDetails: {
 					relatedPlaylists: { likes: "", uploads: "UUKUOmGXE9Ytlc2EzpGqimtw" },
@@ -68,19 +79,9 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 				statistics: {
 					viewCount: "970843260",
 					subscriberCount: "8740000",
-					hiddenSubscriberCount: false,
 					videoCount: "3396",
 				},
 				brandingSettings: {
-					channel: {
-						title: "عمر عبد الكافي",
-						description:
-							"أهلا و سهلا بكم في القناة الرسمية لفضيلة الشيخ الدكتور عمر عبدالكافي ستجدون هنا معظم البرامج التلفزيونية و التسجيلات الخاصة و خطب الجمعة المصورة\nWelcome to Dr. Omar Abdelkafys' official YouTube Channel.\n\nHere you'll find most of Dr. Omar Abdelkafys' TV programs and video recordings.",
-						keywords:
-							'"عمر عبد الكافي" "احسن القصص عمر عبد الكافي" "الشيخ عمر عبد الكافي" "omar abdelkafy عمر عبدالكافى" "زمن الفتن عمر عبد الكافي" "الفتن عمر عبد الكافي" "omar abdelkafi" "احسن القصص" "عمر عبد الكافي قصص" "عمر عبد الكافي رمضان 2020" "زمن الفتن" "أحسن القصص عمر عبد الكافي" "الدكتور عمر عبد الكافي" "الوعد الحق عمر عبد الكافى"',
-						unsubscribedTrailer: "tbhRdDKRqF4",
-						country: "AE",
-					},
 					image: {
 						bannerExternalUrl:
 							"https://yt3.googleusercontent.com/sIxdHewY4qWTY60UIkfwR2ejarGNmLx_NEEWnR7E8FHmp9ojXBISCoyNzTlmCKiugQQTZ9ZL",
@@ -89,6 +90,7 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 			},
 		],
 	}
+
 	const videos = {
 		items: [
 			{
@@ -340,10 +342,266 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 		],
 	}
 
+	const playlists = {
+		kind: "youtube#playlistListResponse",
+		etag: "0OWK_GHli1vGxgdTPzChLhI-g6E",
+		nextPageToken: "CAUQAA",
+		pageInfo: {
+			totalResults: 62,
+			resultsPerPage: 5,
+		},
+		items: [
+			{
+				kind: "youtube#playlist",
+				etag: "wN5qJoRuBa0z7jz6AQyYU4JLtwQ",
+				id: "PL7PzPXcv-qixZCAGXILiGlYOP8HrDhqhu",
+				snippet: {
+					publishedAt: "2023-03-22T13:33:11Z",
+					channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+					title: 'برنامج "الوعد الحق 2" رمضان 2023',
+					description: "",
+					thumbnails: {
+						default: {
+							url: "https://i.ytimg.com/vi/VFNumPUAAUA/default.jpg",
+							width: 120,
+							height: 90,
+						},
+						medium: {
+							url: "https://i.ytimg.com/vi/VFNumPUAAUA/mqdefault.jpg",
+							width: 320,
+							height: 180,
+						},
+						high: {
+							url: "https://i.ytimg.com/vi/VFNumPUAAUA/hqdefault.jpg",
+							width: 480,
+							height: 360,
+						},
+						standard: {
+							url: "https://i.ytimg.com/vi/VFNumPUAAUA/sddefault.jpg",
+							width: 640,
+							height: 480,
+						},
+						maxres: {
+							url: "https://i.ytimg.com/vi/VFNumPUAAUA/maxresdefault.jpg",
+							width: 1280,
+							height: 720,
+						},
+					},
+					channelTitle: "عمر عبد الكافي",
+					localized: {
+						title: 'برنامج "الوعد الحق 2" رمضان 2023',
+						description: "",
+					},
+				},
+				contentDetails: {
+					itemCount: 30,
+				},
+				player: {
+					embedHtml:
+						'\u003ciframe width="640" height="360" src="http://www.youtube.com/embed/videoseries?list=PL7PzPXcv-qixZCAGXILiGlYOP8HrDhqhu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen\u003e\u003c/iframe\u003e',
+				},
+			},
+			{
+				kind: "youtube#playlist",
+				etag: "ma21UA95-pJr7xYGKKIQz0KBcKs",
+				id: "PL7PzPXcv-qiweRDF3oCRq-EeubRyK3DO0",
+				snippet: {
+					publishedAt: "2022-09-12T21:23:48Z",
+					channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+					title: "أذكار الصباح و المساء",
+					description: "",
+					thumbnails: {
+						default: {
+							url: "https://i.ytimg.com/vi/5sY9by_z6YE/default.jpg",
+							width: 120,
+							height: 90,
+						},
+						medium: {
+							url: "https://i.ytimg.com/vi/5sY9by_z6YE/mqdefault.jpg",
+							width: 320,
+							height: 180,
+						},
+						high: {
+							url: "https://i.ytimg.com/vi/5sY9by_z6YE/hqdefault.jpg",
+							width: 480,
+							height: 360,
+						},
+						standard: {
+							url: "https://i.ytimg.com/vi/5sY9by_z6YE/sddefault.jpg",
+							width: 640,
+							height: 480,
+						},
+						maxres: {
+							url: "https://i.ytimg.com/vi/5sY9by_z6YE/maxresdefault.jpg",
+							width: 1280,
+							height: 720,
+						},
+					},
+					channelTitle: "عمر عبد الكافي",
+					localized: {
+						title: "أذكار الصباح و المساء",
+						description: "",
+					},
+				},
+				contentDetails: {
+					itemCount: 2,
+				},
+				player: {
+					embedHtml:
+						'\u003ciframe width="640" height="360" src="http://www.youtube.com/embed/videoseries?list=PL7PzPXcv-qiweRDF3oCRq-EeubRyK3DO0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen\u003e\u003c/iframe\u003e',
+				},
+			},
+			{
+				kind: "youtube#playlist",
+				etag: "KglijM4bE6EVjqplWZ8AnXsK18E",
+				id: "PL7PzPXcv-qiwfCq1nCbu9rafHFQH3liaX",
+				snippet: {
+					publishedAt: "2022-08-26T14:32:32Z",
+					channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+					title: "أسئلة و أجوبة مع الدكتور عمر عبد الكافي",
+					description: "",
+					thumbnails: {
+						default: {
+							url: "https://i.ytimg.com/vi/MGKIeipalQ8/default.jpg",
+							width: 120,
+							height: 90,
+						},
+						medium: {
+							url: "https://i.ytimg.com/vi/MGKIeipalQ8/mqdefault.jpg",
+							width: 320,
+							height: 180,
+						},
+						high: {
+							url: "https://i.ytimg.com/vi/MGKIeipalQ8/hqdefault.jpg",
+							width: 480,
+							height: 360,
+						},
+						standard: {
+							url: "https://i.ytimg.com/vi/MGKIeipalQ8/sddefault.jpg",
+							width: 640,
+							height: 480,
+						},
+						maxres: {
+							url: "https://i.ytimg.com/vi/MGKIeipalQ8/maxresdefault.jpg",
+							width: 1280,
+							height: 720,
+						},
+					},
+					channelTitle: "عمر عبد الكافي",
+					localized: {
+						title: "أسئلة و أجوبة مع الدكتور عمر عبد الكافي",
+						description: "",
+					},
+				},
+				contentDetails: {
+					itemCount: 27,
+				},
+				player: {
+					embedHtml:
+						'\u003ciframe width="640" height="360" src="http://www.youtube.com/embed/videoseries?list=PL7PzPXcv-qiwfCq1nCbu9rafHFQH3liaX" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen\u003e\u003c/iframe\u003e',
+				},
+			},
+			{
+				kind: "youtube#playlist",
+				etag: "kq12JFxlY5bJ7zlZEzAHkIQXybQ",
+				id: "PL7PzPXcv-qizJIzhZGoLssVQuQJUstoAn",
+				snippet: {
+					publishedAt: "2022-04-29T14:37:31Z",
+					channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+					title: "أدعية ليلة القدر مع الشيخ عمر عبد الكافي",
+					description: "",
+					thumbnails: {
+						default: {
+							url: "https://i.ytimg.com/vi/GtlMWXMLEN0/default.jpg",
+							width: 120,
+							height: 90,
+						},
+						medium: {
+							url: "https://i.ytimg.com/vi/GtlMWXMLEN0/mqdefault.jpg",
+							width: 320,
+							height: 180,
+						},
+						high: {
+							url: "https://i.ytimg.com/vi/GtlMWXMLEN0/hqdefault.jpg",
+							width: 480,
+							height: 360,
+						},
+						standard: {
+							url: "https://i.ytimg.com/vi/GtlMWXMLEN0/sddefault.jpg",
+							width: 640,
+							height: 480,
+						},
+						maxres: {
+							url: "https://i.ytimg.com/vi/GtlMWXMLEN0/maxresdefault.jpg",
+							width: 1280,
+							height: 720,
+						},
+					},
+					channelTitle: "عمر عبد الكافي",
+					localized: {
+						title: "أدعية ليلة القدر مع الشيخ عمر عبد الكافي",
+						description: "",
+					},
+				},
+				contentDetails: {
+					itemCount: 8,
+				},
+				player: {
+					embedHtml:
+						'\u003ciframe width="640" height="360" src="http://www.youtube.com/embed/videoseries?list=PL7PzPXcv-qizJIzhZGoLssVQuQJUstoAn" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen\u003e\u003c/iframe\u003e',
+				},
+			},
+			{
+				kind: "youtube#playlist",
+				etag: "qK57y-mKiBAuEHjZJTvq1qX7ni8",
+				id: "PL7PzPXcv-qizbp9_3NlR5i5lrQK-E7FRM",
+				snippet: {
+					publishedAt: "2022-04-27T13:32:00Z",
+					channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+					title: "دعاء",
+					description: "",
+					thumbnails: {
+						default: {
+							url: "https://i.ytimg.com/img/no_thumbnail.jpg",
+							width: 120,
+							height: 90,
+						},
+						medium: {
+							url: "https://i.ytimg.com/img/no_thumbnail.jpg",
+							width: 320,
+							height: 180,
+						},
+						high: {
+							url: "https://i.ytimg.com/img/no_thumbnail.jpg",
+							width: 480,
+							height: 360,
+						},
+					},
+					channelTitle: "عمر عبد الكافي",
+					localized: {
+						title: "دعاء",
+						description: "",
+					},
+				},
+				contentDetails: {
+					itemCount: 0,
+				},
+				player: {
+					embedHtml:
+						'\u003ciframe width="640" height="360" src="http://www.youtube.com/embed/videoseries?list=PL7PzPXcv-qizbp9_3NlR5i5lrQK-E7FRM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen\u003e\u003c/iframe\u003e',
+				},
+			},
+		],
+	}
+
 	return (
 		<div>
-			{JSON.stringify(data)}
+			{/* @ts-ignore */}
+			{/* <ChannelPage channel={data.items[0]} /> */}
+			<Feed data={playlists.items} />
 			<Feed data={videos.items} />
+			{/* {JSON.stringify([...videos.items, ...playlists.items])} */}
+			{/* @ts-ignore */}
 		</div>
 	)
 }

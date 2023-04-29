@@ -1,4 +1,5 @@
 export interface Video {
+	kind?: "youtube#video" | "youtube#playlistItem"
 	id: {
 		kind?: "youtube#video" | "youtube#playlistItem"
 		videoId: string
@@ -348,6 +349,7 @@ export interface FormatDetails {
 }
 
 export interface Channel {
+	kind?: "youtube#channel"
 	id: {
 		kind: "youtube#channel"
 		channelId: string
@@ -416,6 +418,7 @@ export interface ChannelDetails {
 }
 
 export interface PlayList {
+	kind?: "youtube#playlist"
 	id: {
 		kind: "youtube#playlist"
 		playlistId: string
@@ -443,6 +446,12 @@ export interface PlayList {
 			}
 		}
 		channelTitle: string
+	}
+	contentDetails?: {
+		itemCount: number
+	}
+	player?: {
+		embedHtml: string
 	}
 }
 

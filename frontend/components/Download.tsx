@@ -1,6 +1,6 @@
 "use client"
 
-import { DownloadDetails, FormatDetails } from "@/typing"
+import { DownloadDetails } from "@/typing"
 import Image from "next/image"
 import { ChangeEvent, useState } from "react"
 

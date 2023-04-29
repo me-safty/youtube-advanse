@@ -1,10 +1,11 @@
 import Feed from "@/components/Feed"
+import { notFound } from "next/navigation"
 
 async function getData(searchQuery: string) {
 	const maxVideos = 35
 	const res = await fetch(
 		// `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=${maxVideos}&q=${searchQuery}&key=${process.env.YOUTUBE_API_KEY}`,
-		`https://youtube-v31.p.rapidapi.com/search?q=${searchQuery}&part=snippet%2Cid&maxResults=${maxVideos}&order=date`,
+		`https://youtube-v31.p.rapidapi.com/search?q=${searchQuery}&part=snippet&maxResults=${maxVideos}&order=date`,
 		{
 			cache: "no-store",
 			method: "GET",
@@ -25,6 +26,10 @@ export default async function Page({
 	params: { searchQuery: string }
 }) {
 	const data = await getData(searchQuery)
-
-	return <Feed data={data?.items} />
+	if (!data.items[0]) return notFound()
+	return (
+		<div className="">
+			<Feed data={data?.items} />
+		</div>
+	)
 }
