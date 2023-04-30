@@ -8,7 +8,6 @@ interface FeedProps {
 }
 
 const Videos = ({ data }: FeedProps) => {
-	console.log(data)
 	return (
 		<div className="container">
 			<div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 py-5 w-full">

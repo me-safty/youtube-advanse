@@ -10,7 +10,8 @@ const PlayListCard = ({ playlist }: PlayListCardProps) => {
 		<div>
 			<Link
 				href={`/playlist/${
-					playlist.id.playlistId || (playlist.id as unknown as string)
+					typeof playlist.id === "string" ? playlist.id : playlist.id.playlistId
+					// playlist.id.playlistId || (playlist.id as unknown as string)
 				}`}
 			>
 				<div className="relative w-full rounded-xl overflow-hidden">
@@ -37,7 +38,7 @@ const PlayListCard = ({ playlist }: PlayListCardProps) => {
 					{playlist.snippet.title}
 				</p>
 			</Link>
-			<Link href={`/channels/${playlist.snippet.channelId}`}>
+			<Link href={`/channels/${playlist.snippet.channelId}/v`}>
 				<p
 					className="font-semibold text-sm mb-1 overflow-hidden text-gray-400"
 					style={{

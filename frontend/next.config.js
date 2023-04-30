@@ -9,6 +9,7 @@ const nextConfig = {
 			"yt3.ggpht.com",
 			"i.ibb.co",
 			"yt3.googleusercontent.com",
+			"lh3.googleusercontent.com",
 		],
 	},
 }

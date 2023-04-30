@@ -12,9 +12,9 @@ interface VideoDetailsPageProps {
 const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 	const [isExpanded, setExpanded] = useState<boolean>(false)
 	return (
-		<div className="">
+		<div>
 			<iframe
-				className="w-full h-[50vw]"
+				className="w-full h-[55vw]"
 				src={`https://www.youtube.com/embed/${id}`}
 				title={"video_title"}
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -22,18 +22,25 @@ const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 			></iframe>
 			<div className="container">
 				<div className="mx-4 text-white">
-					<h1 className="text-white text-3xl my-5">{video.snippet.title}</h1>
-					<Link href={`/channels/${video.snippet.channelId}`}>
-						<h2 className="my-3 text-gray-500 text-xl inline-block">
+					<h1 className="text-white text-3xl mt-3">{video.snippet.title}</h1>
+					<Link href={`/channels/${video.snippet.channelId}/v`}>
+						<h2 className="my-2 text-gray-500 text-xl inline-block">
 							{video.snippet.channelTitle}
 						</h2>
 					</Link>
-					<div className="p-4 rounded-xl bg-white bg-opacity-5">
-						<Link href={`/download/${id}`}>
+					<div className="p-4 my-2 rounded-xl bg-white bg-opacity-5">
+						<a
+							href={`https://www.youtubepp.com/watch?v=${video.id}`}
+							target="_blank"
+							className="py-2 px-3 bg-white bg-opacity-10 w-fit rounded-lg mb-3 inline-block"
+						>
+							Download
+						</a>
+						{/* <Link href={`/download/${id}`}>
 							<div className="py-2 px-3 bg-white bg-opacity-10 w-fit rounded-lg mb-3">
 								<p className="">Download</p>
 							</div>
-						</Link>
+						</Link> */}
 						<p className="text-gray-400 mb-2 text-sm font-semibold">
 							{new Date(video.snippet.publishedAt).toLocaleString()}
 							<span className="">
@@ -61,7 +68,7 @@ const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 							{video.snippet.description}
 						</p>
 						<button
-							className="text-cyan-700"
+							className="text-cyan-700 cursor-pointer"
 							onClick={() => setExpanded((p) => !p)}
 						>
 							view more

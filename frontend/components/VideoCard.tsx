@@ -1,3 +1,4 @@
+import getRelativeTime from "@/lib/getRelativeTime"
 import { Video } from "@/typing"
 import Image from "next/image"
 import Link from "next/link"
@@ -11,7 +12,7 @@ const VideoCard = ({ video }: VideoCardProps) => {
 		<div className="w-full">
 			<Link href={`/videos/${video.id.videoId}`}>
 				<Image
-					className="w-full object-cover max-h-[150px] rounded-xl"
+					className="w-full object-cover h-[50vw] sm:h-[13vw] lg:h-[11vw]  rounded-xl"
 					src={video.snippet.thumbnails.high.url}
 					alt={video.snippet.title}
 					width={video.snippet.thumbnails.high.width || "480"}
@@ -29,9 +30,9 @@ const VideoCard = ({ video }: VideoCardProps) => {
 					{video.snippet.title}
 				</p>
 			</Link>
-			<Link href={`/channels/${video.snippet.channelId}`}>
+			<Link href={`/channels/${video.snippet.channelId}/v`}>
 				<p
-					className="font-semibold text-sm my-1 overflow-hidden text-gray-400"
+					className="text-sm my-1 overflow-hidden text-gray-400"
 					style={{
 						height: "calc(1 * 1rem * 1.25)",
 						display: "-webkit-box",
@@ -42,6 +43,9 @@ const VideoCard = ({ video }: VideoCardProps) => {
 					{video.snippet.channelTitle}
 				</p>
 			</Link>
+			<p className="text-sm my-1 text-gray-400">
+				{getRelativeTime(video.snippet.publishedAt)}
+			</p>
 		</div>
 	)
 }

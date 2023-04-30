@@ -8,7 +8,7 @@ interface ChannelProps {
 
 const ChannelCard = ({ channel }: ChannelProps) => (
 	<div>
-		<Link href={`/channels/${channel.id.channelId}`}>
+		<Link href={`/channels/${channel.id.channelId}/v`}>
 			<div className="flex items-center justify-center gap-3 h-full flex-col">
 				<Image
 					className="w-[55%] object-cover rounded-full"
