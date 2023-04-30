@@ -10,7 +10,7 @@ const SearchBar = () => {
 		<div className="flex rounded-full text-white overflow-hidden">
 			<input
 				className="bg-[#121212] px-4 py-2 outline-none w-[55vw]"
-				type="password"
+				type="text"
 				name="search"
 				value={inputValue}
 				onChange={(e) => setValue(e.target.value)}
