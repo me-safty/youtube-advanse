@@ -29,18 +29,18 @@ const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 						</h2>
 					</Link>
 					<div className="p-4 my-2 rounded-xl bg-white bg-opacity-5">
-						<a
+						{/* <a
 							href={`https://www.youtubepp.com/watch?v=${video.id}`}
 							target="_blank"
 							className="py-2 px-3 bg-white bg-opacity-10 w-fit rounded-lg mb-3 inline-block"
 						>
 							Download
-						</a>
-						{/* <Link href={`/download/${id}`}>
+						</a> */}
+						<Link href={`/download/${id}`}>
 							<div className="py-2 px-3 bg-white bg-opacity-10 w-fit rounded-lg mb-3">
 								<p className="">Download</p>
 							</div>
-						</Link> */}
+						</Link>
 						<p className="text-gray-400 mb-2 text-sm font-semibold">
 							{new Date(video.snippet.publishedAt).toLocaleString()}
 							<span className="">

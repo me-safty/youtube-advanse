@@ -9,44 +9,84 @@ interface DownloadProps {
 }
 
 const Download = ({ videoDownloadDetails }: DownloadProps) => {
-	const [selectedOption, setSelectedOption] = useState<string>()
+	const [selectedVideo, setSelectedVideo] = useState<string>()
 
-	const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
-		setSelectedOption(event.target.value)
+	const handleSelectedVideo = (event: ChangeEvent<HTMLSelectElement>) => {
+		setSelectedVideo(event.target.value)
 	}
 
-	const videoUrls = videoDownloadDetails.adaptiveFormats.filter(
-		(e) => e.mimeType.slice(0, 9) === "video/mp4"
+	const [selectedAudio, setSelectedAudio] = useState<string>()
+
+	const handleSelectedAudio = (event: ChangeEvent<HTMLSelectElement>) => {
+		setSelectedAudio(event.target.value)
+	}
+
+	const videoUrls = videoDownloadDetails.formats.filter(
+		(e) =>
+			(e.hasAudio && e.mimeType.slice(0, 9) === "video/mp4") ||
+			(e.hasAudio && e.mimeType.slice(0, 10) === "video/webm")
 	)
+	const audioUrls = videoDownloadDetails.formats.filter(
+		(e) =>
+			(e.mimeType.slice(0, 9) === "audio/mp4" && e.hasAudio) ||
+			(e.mimeType.slice(0, 10) === "audio/webm" && e.hasAudio)
+	)
+
 	return (
 		<div className="container">
-			<div className="w-full flex items-center justify-center flex-col">
+			<div className="w-full flex items-center justify-center flex-col my-5">
 				<Image
-					src={videoDownloadDetails.thumbnail[3].url}
-					alt={videoDownloadDetails.title}
-					width={videoDownloadDetails.thumbnail[3].width}
-					height={videoDownloadDetails.thumbnail[3].height}
+					src={videoDownloadDetails.videoDetails.thumbnails[3].url}
+					alt={videoDownloadDetails.videoDetails.title}
+					width={videoDownloadDetails.videoDetails.thumbnails[3].width}
+					height={videoDownloadDetails.videoDetails.thumbnails[3].height}
 					className="rounded-xl text-center sm:w-[600px] sm:h-[480px] object-cover"
 				/>
-				<h1 className="text-white m-3">{videoDownloadDetails.title}</h1>
-				<p className="text-gray-400 mb-2">Select the Quality you want</p>
-				<select value={selectedOption} onChange={handleSelectChange}>
-					<option value="">-- Please select --</option>
-					{videoUrls.map((e) => (
-						<option key={e.url} value={e.url}>
-							{e.qualityLabel}
-						</option>
-					))}
-				</select>
-				{selectedOption && (
-					<a
-						href={selectedOption}
-						target="_blank"
-						className="bg-white bg-opacity-10 px-2 py-2 rounded-lg text-white m-3"
-					>
-						Download
-					</a>
-				)}
+				<h1 className="text-white m-3">
+					{videoDownloadDetails.videoDetails.title}
+				</h1>
+				<div className="flex gap-3 flex-col sm:flex-row">
+					<div className="">
+						<p className="text-gray-400 mb-2">Video Downloading</p>
+						<select value={selectedVideo} onChange={handleSelectedVideo}>
+							<option value="">-- Please select --</option>
+							{videoUrls.map((e) => (
+								<option key={e.url} value={e.url}>
+									{e.qualityLabel}
+								</option>
+							))}
+						</select>
+						{selectedVideo && (
+							<a
+								href={selectedVideo}
+								target="_blank"
+								className="bg-white bg-opacity-10 px-2 py-2 rounded-lg text-white m-3"
+							>
+								Download
+							</a>
+						)}
+					</div>
+					<div className="">
+						<p className="text-gray-400 mb-2">Audio Downloading</p>
+						<select value={selectedAudio} onChange={handleSelectedAudio}>
+							<option value="">-- Please select --</option>
+							{audioUrls.map((e) => (
+								<option key={e.url} value={e.url}>
+									{e.quality}
+								</option>
+							))}
+						</select>
+						{selectedAudio && (
+							<a
+								href={selectedAudio}
+								target="_blank"
+								className="bg-white bg-opacity-10 px-2 py-2 rounded-lg text-white m-3"
+							>
+								Download
+							</a>
+						)}
+					</div>
+				</div>
 			</div>
 		</div>
 	)

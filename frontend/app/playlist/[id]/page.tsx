@@ -28,7 +28,6 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 				no playlists in this channel
 			</p>
 		)
-
 	return <PlaylistPage playlistVideos={playlistData.items} />
 }
 

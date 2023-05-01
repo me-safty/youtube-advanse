@@ -1,26 +1,36 @@
 import Download from "@/components/Download"
+import { DownloadDetails } from "@/typing"
 import { notFound } from "next/navigation"
 
+// async function getData(videoId: string) {
+// 	const res = await fetch(
+// 		`https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=${videoId}`,
+// 		{
+// 			cache: "no-store",
+// 			method: "GET",
+// 			// @ts-ignore
+// 			headers: {
+// 				"content-type": "application/octet-stream",
+// 				"X-RapidAPI-Key": process.env.RAPID_API_KEY,
+// 				"X-RapidAPI-Host": "ytstream-download-youtube-videos.p.rapidapi.com",
+// 			},
+// 		}
+// 	)
+// 	return res.json()
+// }
+
 async function getData(videoId: string) {
-	const res = await fetch(
-		`https://ytstream-download-youtube-videos.p.rapidapi.com/dl?id=${videoId}`,
-		{
-			cache: "no-store",
-			method: "GET",
-			// @ts-ignore
-			headers: {
-				"content-type": "application/octet-stream",
-				"X-RapidAPI-Key": process.env.RAPID_API_KEY,
-				"X-RapidAPI-Host": "ytstream-download-youtube-videos.p.rapidapi.com",
-			},
-		}
-	)
+	const res = await fetch(`${process.env.URL}/api/download/${videoId}`, {
+		cache: "no-store",
+		method: "GET",
+	})
 	return res.json()
 }
 
 const page = async ({ params: { id } }: { params: { id: string } }) => {
 	const downloadData = await getData(id)
-	if (downloadData?.code === 403) return notFound()
+	const downloadVideoData: DownloadDetails = downloadData.info
+	if (!downloadVideoData) return notFound()
 
 	// const downloadData = {
 	// 	id: "UxxajLWwzqY",
@@ -420,8 +430,7 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 
 	return (
 		<div>
-			{/* @ts-ignore */}
-			<Download videoDownloadDetails={downloadData} />
+			<Download videoDownloadDetails={downloadVideoData} />
 		</div>
 	)
 }
