@@ -29,7 +29,6 @@ export default async function Page({
 	if (!data.items[0]) return notFound()
 	return (
 		<main>
-			{JSON.stringify(data)}
 			<Feed data={data?.items} />
 		</main>
 	)
