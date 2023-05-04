@@ -1,22 +1,25 @@
-import { ChannelVideosForSubscriptions } from "@/typing"
+import { ChannelVideosForSubscriptions, VideoSubscriptionsCard } from "@/typing"
 import React from "react"
 import SubscriptionsVideoCard from "./SubscriptionsVideoCard"
 
 interface SubscriptionsFeedProps {
-	channel: ChannelVideosForSubscriptions
+	// channel: ChannelVideosForSubscriptions
+	videos: VideoSubscriptionsCard[]
 }
 
-const SubscriptionsFeed = ({ channel }: SubscriptionsFeedProps) => {
+const SubscriptionsFeed = ({ videos }: SubscriptionsFeedProps) => {
 	return (
 		<div className="">
 			<div className="container">
-				{channel.data.map((video) => (
-					<SubscriptionsVideoCard
-						key={video.videoId}
-						video={video}
-						channel={channel.meta}
-					/>
-				))}
+				<div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 py-5 w-full">
+					{videos.map((video) => (
+						<SubscriptionsVideoCard
+							key={video.videoId}
+							video={video}
+							// channel={channel.meta}
+						/>
+					))}
+				</div>
 			</div>
 		</div>
 	)

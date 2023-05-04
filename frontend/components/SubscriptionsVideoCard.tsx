@@ -5,13 +5,13 @@ import Link from "next/link"
 
 interface SubscriptionsVideoCardProps {
 	video: VideoSubscriptionsCard
-	channel: ChannelSubscriptionsCard
+	// channel: ChannelSubscriptionsCard
 }
 
 const SubscriptionsVideoCard = ({
 	video,
-	channel,
-}: SubscriptionsVideoCardProps) => {
+}: // channel,
+SubscriptionsVideoCardProps) => {
 	return (
 		<div className="w-full">
 			<Link href={`/videos/${video.videoId}`}>
@@ -23,15 +23,20 @@ const SubscriptionsVideoCard = ({
 					height={video.thumbnail[3].height || "360"}
 				/>
 			</Link>
-			<div className="flex gap-2">
-				<Image
-					className="w-full object-cover h-[50vw] sm:h-[13vw] lg:h-[11vw]  rounded-xl"
-					src={channel.avatar[2].url}
-					alt="channel avatar"
-					width={channel.avatar[2].width || "480"}
-					height={channel.avatar[2].height || "360"}
-				/>
-				<div className="">
+			<div className="flex gap-1 flex-row-reverse">
+				{/* <Link
+					href={`/channels/${channel.channelId}/v`}
+					className="min-w-[3vw] min-h-[3vw] max-w-[3vw] max-h-[3vw]"
+				>
+					<Image
+						className="object-cover w-full h-full my-2 rounded-full"
+						src={channel.avatar[2].url}
+						alt="channel avatar"
+						width={channel.avatar[2].width || "480"}
+						height={channel.avatar[2].height || "360"}
+					/>
+				</Link> */}
+				<div className="flex-1">
 					<Link href={`/videos/${video.videoId}`}>
 						<p
 							className="font-semibold my-1 overflow-hidden text-white"
@@ -45,7 +50,7 @@ const SubscriptionsVideoCard = ({
 							{video.title}
 						</p>
 					</Link>
-					<Link href={`/channels/${channel}/v`}>
+					{/* <Link href={`/channels/${channel.channelId}/v`}>
 						<p
 							className="text-sm my-1 overflow-hidden text-gray-400"
 							style={{
@@ -57,7 +62,7 @@ const SubscriptionsVideoCard = ({
 						>
 							{channel.title}
 						</p>
-					</Link>
+					</Link> */}
 					<p className="text-sm my-1 text-gray-400">
 						{getRelativeTime(video.publishedAt)}
 					</p>

@@ -49,6 +49,12 @@ const channelIds = [
 	"UCKUOmGXE9Ytlc2EzpGqimtw",
 	"UCCy0qwIz722Gi2MtjYlrQeg",
 	"UCEHvaZ336u7TIsUQ2c6SAeQ",
+	"UC2qcjzOEX3lxE73cyroWdiw",
+	"UC4kRorAXuIkyIX6vwXKaLWg",
+	"UCdNo5yauE8IU-vS8_dO3qew",
+	"UCQqN3qgYbkfd0EkdhJmN5tQ",
+	"UCah56qawts736uNxZA3inLQ",
+	"UCF8nUQJCIN5umZZn_IzLp-w",
 ]
 
 // async function getData(channelId: string) {
@@ -324,19 +330,36 @@ const demoVideos: Video[] = [
 
 export default async function Home() {
 	// UCKUOmGXE9Ytlc2EzpGqimtw
-	// const data = await getData()
-
+	// const getSubscriptionsData = await getData()
 	// const subscriptionsData = channelIds.map((id) => getData(id))
 	// const data = await Promise.all(subscriptionsData)
-
+	// const channels = subscriptions.map((e) => e.meta)
+	// const videos = data
+	const videos = subscriptions
+		.map((e) => e.data.slice(0, 10))
+		.flat()
+		.sort(
+			(a, b) =>
+				new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+		)
+	// const videosPerChannelNum = subscriptions[0].data.length - 20
+	// const newData = channels.map((e, i) => ({
+	// 	meta: e,
+	// 	data: videos.slice(i * videosPerChannelNum, i + 1 * videosPerChannelNum),
+	// }))
+	// console.log(channels)
+	// console.log("||||||||||||||||||||||||||||||||||||")
+	// console.log(videos.length, "||||||||||||")
+	// const sortedData = subscriptions.sort((a, b) => a.)
 	return (
 		<>
 			{/* <div className="text-white">{JSON.stringify(data, null, 2)}</div> */}
 			{/* <Feed data={demoVideos} /> */}
-			{subscriptions.map((channel) => (
-				// @ts-ignore
-				<SubscriptionsFeed channel={channel} />
-			))}
+			{/* {newData.map((channel) => (
+				// <SubscriptionsFeed channel={channel} />
+			))} */}
+			{/* @ts-ignore */}
+			<SubscriptionsFeed videos={videos} />
 		</>
 	)
 }

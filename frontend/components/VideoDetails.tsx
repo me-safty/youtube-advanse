@@ -14,7 +14,7 @@ const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 	return (
 		<div>
 			<iframe
-				className="w-full h-[55vw]"
+				className="w-full h-[53vw]"
 				src={`https://www.youtube.com/embed/${id}`}
 				title={"video_title"}
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

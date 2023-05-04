@@ -64,12 +64,12 @@ const ChannelPage = ({ channel }: ChannelPageProps) => {
 				allowfullscreen
 			></iframe> */}
 				<div className="text-white my-1 flex gap-1">
-					<Link href={`channels/${channel.id}/v`}>
+					<Link href={`/channels/${channel.id}/v`}>
 						<button className="bg-white bg-opacity-5 px-2 py-1 rounded-lg">
 							videos
 						</button>
 					</Link>
-					<Link href={`channels/${channel.id}/p`}>
+					<Link href={`/channels/${channel.id}/p`}>
 						<button className="bg-white bg-opacity-5 px-2 py-1 rounded-lg">
 							playlists
 						</button>
