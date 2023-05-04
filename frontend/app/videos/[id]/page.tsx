@@ -65,6 +65,7 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 	return (
 		<main>
 			{/* @ts-ignore */}
+			{/* {JSON.stringify(videoDetails)} */}
 			<title>{videoDetails.items[0].snippet.title}</title>
 			<VideoDetailsPage video={videoDetails.items[0]} id={id} />
 		</main>

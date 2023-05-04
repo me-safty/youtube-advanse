@@ -1305,3 +1305,157 @@ export interface DownloadDetails {
 		]
 	}
 }
+
+export interface ChannelVideosForSubscriptions {
+	meta: ChannelSubscriptionsCard
+	continuation: string
+	data: VidoSubscriptionsFeed[]
+}
+
+export interface ChannelSubscriptionsCard {
+	channelId: string
+	title: string
+	description: string
+	channelHandle: string
+	banner: [
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		}
+	]
+	tvBanner: [
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		}
+	]
+	mobileBanner: [
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		}
+	]
+	avatar: [
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		}
+	]
+	subscriberCount: number
+	videosCountText: string
+	videosCount: string
+}
+
+export interface VideoSubscriptionsCard {
+	type: string
+	videoId: string
+	title: string
+	description: string
+	viewCount: string
+	publishedTimeText: string
+	publishedAt: string
+	lengthText: string
+	thumbnail: [
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		},
+		{
+			url: string
+			width: number
+			height: number
+		}
+	]
+	richThumbnail: [
+		{
+			url: string
+			width: number
+			height: number
+		}
+	]
+}

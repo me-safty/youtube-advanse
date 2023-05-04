@@ -21,7 +21,6 @@ async function getData(playlistId: string) {
 
 const page = async ({ params: { id } }: { params: { id: string } }) => {
 	const playlistData = await getData(id)
-	console.log(JSON.stringify(playlistData))
 	if (!playlistData.items[0])
 		return (
 			<p className="py-2 text-white font-semibold text-lg">

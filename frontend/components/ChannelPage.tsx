@@ -8,13 +8,15 @@ interface ChannelPageProps {
 const ChannelPage = ({ channel }: ChannelPageProps) => {
 	return (
 		<div className="">
-			<Image
-				className="w-full h-[15.5vw] object-cover"
-				src={channel.brandingSettings.image.bannerExternalUrl}
-				alt="banner image"
-				width={1000}
-				height={300}
-			/>
+			{channel.brandingSettings.image && (
+				<Image
+					className="w-full h-[15.5vw] object-cover"
+					src={channel.brandingSettings.image.bannerExternalUrl}
+					alt="banner image"
+					width={1000}
+					height={300}
+				/>
+			)}
 			<div className="container">
 				<div className="py-5 flex items-center gap-5 flex-col sm:flex-row">
 					<Image

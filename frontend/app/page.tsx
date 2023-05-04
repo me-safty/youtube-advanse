@@ -1,13 +1,76 @@
 import Feed from "@/components/Feed"
 import { Video } from "@/typing"
+import subscriptions from "@/lib/subscriptions"
+import SubscriptionsFeed from "@/components/SubscriptionsFeed"
+
+// async function getData() {
+// 	try {
+// 		const channelIds = [
+// 			"UCKUOmGXE9Ytlc2EzpGqimtw",
+// 			"UCCy0qwIz722Gi2MtjYlrQeg",
+// 			"UCEHvaZ336u7TIsUQ2c6SAeQ",
+// 		]
+// 		const requests = channelIds.map((id) =>
+// 			fetch(`https://yt-api.p.rapidapi.com/channel/videos?id=${id}`, {
+// 				next: { revalidate: 7000 },
+// 				method: "GET",
+// 				// @ts-ignore
+// 				headers: {
+// 					// "content-type": "application/octet-stream",
+// 					"X-RapidAPI-Key": process.env.RAPID_API_KEY,
+// 					"X-RapidAPI-Host": "yt-api.p.rapidapi.com",
+// 				},
+// 			})
+// 		)
+
+// 		Promise.all(requests)
+// 			.then((responses) =>
+// 				Promise.all(responses.map((response) => response.json()))
+// 			)
+// 			.then((data) => {
+// 				console.log(data)
+// 				return data
+// 			})
+// 			.catch((error) => {
+// 				console.error(error)
+// 			})
+// 	} catch (e) {
+// 		console.log(e)
+// 	}
+
+// 	// const maxVideos = 10
+// 	// const res = await fetch(
+// 	// 	`https://www.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxVideos}`,
+// 	// 	{ next: { revalidate: 6600 } }
+// 	// )
+// }
+
+const channelIds = [
+	"UCKUOmGXE9Ytlc2EzpGqimtw",
+	"UCCy0qwIz722Gi2MtjYlrQeg",
+	"UCEHvaZ336u7TIsUQ2c6SAeQ",
+]
 
 // async function getData(channelId: string) {
-//   const maxVideos = 10
-//   const res = await fetch(
-//     `https://www.googleapis.com/youtube/v3/search?key=${process.env.YOUTUBE_API_KEY}&channelId=${channelId}&part=snippet,id&order=date&maxResults=${maxVideos}`,
-//     { next: { revalidate: 3600 } }
-//   )
-//   return res.json()
+// 	try {
+// 		const res = await fetch(
+// 			`https://yt-api.p.rapidapi.com/channel/videos?id=${channelId}`,
+// 			{
+// 				next: { revalidate: 7000 },
+// 				method: "GET",
+// 				// @ts-ignore
+// 				headers: {
+// 					// "content-type": "application/octet-stream",
+// 					"X-RapidAPI-Key": process.env.RAPID_API_KEY,
+// 					"X-RapidAPI-Host": "yt-api.p.rapidapi.com",
+// 				},
+// 			}
+// 		)
+
+// 		return res.json()
+// 	} catch (e) {
+// 		console.log(e)
+// 	}
 // }
 
 const demoVideos: Video[] = [
@@ -258,9 +321,22 @@ const demoVideos: Video[] = [
 		},
 	},
 ]
+
 export default async function Home() {
 	// UCKUOmGXE9Ytlc2EzpGqimtw
-	// const data = await getData("UCKUOmGXE9Ytlc2EzpGqimtw")
-	// console.log(videos)
-	return <Feed data={demoVideos} />
+	// const data = await getData()
+
+	// const subscriptionsData = channelIds.map((id) => getData(id))
+	// const data = await Promise.all(subscriptionsData)
+
+	return (
+		<>
+			{/* <div className="text-white">{JSON.stringify(data, null, 2)}</div> */}
+			{/* <Feed data={demoVideos} /> */}
+			{subscriptions.map((channel) => (
+				// @ts-ignore
+				<SubscriptionsFeed channel={channel} />
+			))}
+		</>
+	)
 }

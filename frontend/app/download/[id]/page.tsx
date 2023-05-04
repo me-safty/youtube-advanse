@@ -31,6 +31,7 @@ const page = async ({ params: { id } }: { params: { id: string } }) => {
 	const downloadData = await getData(id)
 	const downloadVideoData: DownloadDetails = downloadData.info
 	if (!downloadVideoData) return notFound()
+	console.log(downloadVideoData, "|||||", downloadData)
 
 	// const downloadData = {
 	// 	id: "UxxajLWwzqY",

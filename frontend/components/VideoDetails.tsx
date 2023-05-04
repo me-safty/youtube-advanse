@@ -65,7 +65,7 @@ const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 									: {}
 							}
 						>
-							{video.snippet.description}
+							{video?.snippet?.description}
 						</p>
 						<button
 							className="text-cyan-700 cursor-pointer"

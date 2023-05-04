@@ -11,14 +11,14 @@ const SearchBar = () => {
 		<div className="flex rounded-full text-white overflow-hidden">
 			<input
 				className="bg-[#121212] px-4 py-2 outline-none w-[55vw]"
-				type="password"
+				type="text"
 				name="search"
 				value={inputValue}
 				onChange={(e) => setValue(e.target.value)}
 				placeholder="Search..."
 			/>
 			<button
-				className="bg-[#313131] px-[10px] rounded-e-full"
+				className="bg-[#313131] pl-[8px] pr-[12px] rounded-e-full"
 				onClick={() => router.push(`/search/${inputValue}`)}
 			>
 				<svg

@@ -40,7 +40,7 @@ const Download = ({ videoDownloadDetails }: DownloadProps) => {
 					alt={videoDownloadDetails.videoDetails.title}
 					width={videoDownloadDetails.videoDetails.thumbnails[3].width}
 					height={videoDownloadDetails.videoDetails.thumbnails[3].height}
-					className="rounded-xl text-center sm:w-[600px] sm:h-[480px] object-cover"
+					className="rounded-xl text-center sm:w-[600px] object-cover"
 				/>
 				<h1 className="text-white m-3">
 					{videoDownloadDetails.videoDetails.title}
@@ -60,7 +60,7 @@ const Download = ({ videoDownloadDetails }: DownloadProps) => {
 							<a
 								href={selectedVideo}
 								target="_blank"
-								className="bg-white bg-opacity-10 px-2 py-2 rounded-lg text-white m-3"
+								className="bg-white bg-opacity-10 px-2 py-2 rounded-lg text-white m-3 block text-center"
 							>
 								Download
 							</a>
@@ -80,7 +80,7 @@ const Download = ({ videoDownloadDetails }: DownloadProps) => {
 							<a
 								href={selectedAudio}
 								target="_blank"
-								className="bg-white bg-opacity-10 px-2 py-2 rounded-lg text-white m-3"
+								className="bg-white bg-opacity-10 px-2 py-2 rounded-lg text-white m-3 block text-center"
 							>
 								Download
 							</a>
