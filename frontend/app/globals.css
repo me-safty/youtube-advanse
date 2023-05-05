@@ -6,6 +6,17 @@ body {
 	background-color: hsl(0, 0%, 7%);
 }
 
+*::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	background-color: rgba(207, 207, 207, 0.797);
+}
+*::-webkit-scrollbar {
+	width: 0.5rem;
+	height: 0.3rem;
+	background-color: #5b5b5b2d;
+	border-radius: 20px;
+}
+
 /* container  */
 .container {
 	padding: 0 15px;

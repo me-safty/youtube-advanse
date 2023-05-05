@@ -4536,3 +4536,1166 @@ const subscriptions = [
 	},
 ]
 export default subscriptions
+
+export const feed = {
+	kind: "youtube#SubscriptionListResponse",
+	etag: "C-7KJz1aesGZU8sCl4fs5GA_oms",
+	pageInfo: {
+		totalResults: 43,
+		resultsPerPage: 50,
+	},
+	items: [
+		{
+			kind: "youtube#subscription",
+			etag: "vLl3lF3n9n0i3HAaR0OV3lBQ6R4",
+			id: "-9inZYmp8kD8lK2LsNU2fHRLahPdfJ-LLLhNxyRVSJ0",
+			snippet: {
+				publishedAt: "2023-03-18T16:11:29.856034Z",
+				title: "عمر عبد الكافي",
+				description:
+					"أهلا و سهلا بكم في القناة الرسمية لفضيلة الشيخ الدكتور عمر عبدالكافي ستجدون هنا معظم البرامج التلفزيونية و التسجيلات الخاصة و خطب الجمعة المصورة\nWelcome to Dr. Omar Abdelkafys' official YouTube Channel.\n\nHere you'll find most of Dr. Omar Abdelkafys' TV programs and video recordings.",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCKUOmGXE9Ytlc2EzpGqimtw",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqPOp2F94oMIV6SCjHkKi9-ZGYYY25XcwdM9yBSF4Q=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqPOp2F94oMIV6SCjHkKi9-ZGYYY25XcwdM9yBSF4Q=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqPOp2F94oMIV6SCjHkKi9-ZGYYY25XcwdM9yBSF4Q=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "2BqKQwjiR_Rcz_pI18qNjp6k89w",
+			id: "-9inZYmp8kD8lK2LsNU2fJFY1xGV1hPfOXnNd9Fkfk4",
+			snippet: {
+				publishedAt: "2022-01-05T01:19:24.504495Z",
+				title: "Ali Muhammad Ali",
+				description:
+					"أحاول في هذه القناة مشاركة المعرفة ..  خصوصاً في مجال تطوير الذات واكتساب المهارات.\nأرجو أن تجد هنا ما يجعل حياتك أفضل :)\n\nNote:\nI am not interested in interviews or public talks.\nPlease don't  contact me for that reason.",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UChbuH4HULlesX_rzlozkT6Q",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqPQjA3mkBk_2vOd2UhU4Bao9A-Le4wCzBKKEhG76A=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqPQjA3mkBk_2vOd2UhU4Bao9A-Le4wCzBKKEhG76A=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqPQjA3mkBk_2vOd2UhU4Bao9A-Le4wCzBKKEhG76A=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "3FnF_u48gi3iJnvdule_FjmuB4M",
+			id: "-9inZYmp8kDHMnGQjvagxUY3JSZL45Xe_JyNpRYi8e8",
+			snippet: {
+				publishedAt: "2022-08-30T17:15:34.075051Z",
+				title: "وعي",
+				description: "بودكاست وعي مع أحمد عامر، حازم الصديق وشريف علي.",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UC2qcjzOEX3lxE73cyroWdiw",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/6uJJSwekJeReenIzIrnzs4Vwe3PTi8_G5XBbHgHym7ycI44Xv5KkuAhUBu_pVw-KmNDQelOUeQ=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/6uJJSwekJeReenIzIrnzs4Vwe3PTi8_G5XBbHgHym7ycI44Xv5KkuAhUBu_pVw-KmNDQelOUeQ=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/6uJJSwekJeReenIzIrnzs4Vwe3PTi8_G5XBbHgHym7ycI44Xv5KkuAhUBu_pVw-KmNDQelOUeQ=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "kvKgfjR_Mhv32qI6VZgd2DCi7_E",
+			id: "-9inZYmp8kD8lK2LsNU2fKl7cwAhiSYsgLz8pGNAPC0",
+			snippet: {
+				publishedAt: "2023-03-21T09:07:31.212843Z",
+				title: "إنه القرآن",
+				description:
+					"رسالتنا كسر الحواجز بين الناس والقرآن، حتى تتذوق قلوبهم روعة هذا الكلام الذي لو نزل على جبل لتصدع من خشية الله. تابعنا على قنوات إنه القرآن:\nتجميع لجميع قنوات إنه القرآن على مواقع التواصل \n\n- صفحة الفيس بوك \nhttps://www.facebook.com/itsTheQuran/\n- قناة الساوند كلاود \nhttps://soundcloud.com/itsthequran\n- قناة التلجرام \nhttps://t.me/itsTheQuraan\n- قناة إنه القرآن لنشر مقاطع مترجمة \n@ItsTheQuranEn\n- أرشيف تفريغات كل الدروس \nhttp://t.me/Architsthequraan_bot\n- مكتبة مواد إنه القرآن\nhttps://library.itsthequran.com/\n-  الموقع \nhttp://www.itsthequran.com",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCCy0qwIz722Gi2MtjYlrQeg",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/rNwHMfpdSGReqcbi7tmlg7dVLGB0-Hs2lO8CjMHmb8KRand_H8qCsLA5DtVS5cnMEkcC9_zc2A=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/rNwHMfpdSGReqcbi7tmlg7dVLGB0-Hs2lO8CjMHmb8KRand_H8qCsLA5DtVS5cnMEkcC9_zc2A=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/rNwHMfpdSGReqcbi7tmlg7dVLGB0-Hs2lO8CjMHmb8KRand_H8qCsLA5DtVS5cnMEkcC9_zc2A=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "MyCOP1F14bjVBaiqk0hd3EWz-Kc",
+			id: "-9inZYmp8kD8lK2LsNU2fD8KAu-AoanruFiOybwXsNc",
+			snippet: {
+				publishedAt: "2019-06-29T14:28:09.930858Z",
+				title: "AJ+ كبريت",
+				description:
+					"مرحباً بكم في +AJ  عربي.. معاً نتشارك القصص\n+AJ عربي مساحة رقمية تهتم بعرض أحداث آنية ومواضيع من وحي الواقع العربي المعاصر بطريقة مختلفة، مميزة ومؤثرة ضمن قالب صحافي مبتكر يحفّز الحوار والتفاعل البنّاء في المجتمع",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UC-4KnPMmZzwAzW7SbVATUZQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqM1Hy2CEyPuGSdUVODfJ1eWw5JXAcVqaKOufRQKew=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqM1Hy2CEyPuGSdUVODfJ1eWw5JXAcVqaKOufRQKew=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqM1Hy2CEyPuGSdUVODfJ1eWw5JXAcVqaKOufRQKew=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "Ia7b8Beh4utrsj4cPugz1NK_ypI",
+			id: "-9inZYmp8kD8lK2LsNU2fLmMdNksK6tdKTnuA8vVqOE",
+			snippet: {
+				publishedAt: "2020-03-20T07:22:11.221919Z",
+				title: "دروس أونلاين",
+				description:
+					"هذه القناه مهتمه بتعليم اللغه الانجليزيه و  الجرافك  و نصائح في اي مجال او تعليم كيفيه عمل اي شئ- الى حد ما - ...ببساطه هذه قناة للتعلم..\n موقعنا DroosOnline.com\n\nالايميل : Contact@droosonline.com",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCEHvaZ336u7TIsUQ2c6SAeQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqOK_-ojDyzzFGz0JoKcYIluO52W-Wz0FncwyUsWoQ=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqOK_-ojDyzzFGz0JoKcYIluO52W-Wz0FncwyUsWoQ=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqOK_-ojDyzzFGz0JoKcYIluO52W-Wz0FncwyUsWoQ=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "d7DwSUVTKElE1VjKxKLGl5QhhSc",
+			id: "-9inZYmp8kD8lK2LsNU2fHlIE-o-rJ_bJc56cisv0HQ",
+			snippet: {
+				publishedAt: "2021-08-14T04:43:40.260876Z",
+				title: "Elzero Web School",
+				description: "Life Is Short, Start Learning",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCSNkfKl4cU-55Nm-ovsvOHQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/-qCvx3y42iXp9cMNe5Yx3aoR2lL8TFxsrLShyBLuXOE4tY56kt_bPceyvPw95rpUqgKqI8zDBe4=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/-qCvx3y42iXp9cMNe5Yx3aoR2lL8TFxsrLShyBLuXOE4tY56kt_bPceyvPw95rpUqgKqI8zDBe4=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/-qCvx3y42iXp9cMNe5Yx3aoR2lL8TFxsrLShyBLuXOE4tY56kt_bPceyvPw95rpUqgKqI8zDBe4=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "UCxFyLmcugUb4APcDGvp_MGJLpA",
+			id: "-9inZYmp8kD8lK2LsNU2fEZXHA3LE0mbR6YD_zZ26c8",
+			snippet: {
+				publishedAt: "2023-03-01T04:18:13.613954Z",
+				title: "Omardizer | عمرديزر",
+				description:
+					"| مهندس + يوتيوبر | أحدث الأجهزة والتكنولوجيا وكل الإختراعات الجديدة\n-----------------------------------------------------\nFor business and inquiries |  للاستفسارات والتعاون : omardahab@gmail.com\n\nمعداتي : https://www.amazon.com/shop/omardizer\n-----------------------------------------------------\n omardizer | YouTuber + Engineer | All the new devices, gadgets and latest technology",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UC1FYFqgdW_1LueJTmXn-8cg",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqNUxlhJ4uv6dyp27sy6S9lF2zzMfBvO-XgbHrSBDg=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqNUxlhJ4uv6dyp27sy6S9lF2zzMfBvO-XgbHrSBDg=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqNUxlhJ4uv6dyp27sy6S9lF2zzMfBvO-XgbHrSBDg=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "_DzqzzPXQGucyU7ZPDZyzUDqrm0",
+			id: "-9inZYmp8kD8lK2LsNU2fHfUVV2C5HhjSv8KH0IOfFk",
+			snippet: {
+				publishedAt: "2022-10-15T09:09:10.576781Z",
+				title: "Sonny Sangha",
+				description:
+					"I'm Sonny. 💯\n\nYou might also know me as PAPA React!\n\nI've been coding for over 10 years now. As a Full Stack developer I've worked both with startups and large corporations to help build & scale their companies. Along the journey I realised my passion existed in helping others excel and pursue their dreams as upcoming developers and if that’s not enough I have cloned most of the applications you have used in your life! 🌟\n\n🚨 Join the world’s BEST developer community “Zero to Full Stack Hero” NOW:\nhttps://www.papareact.com/course",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCqeTj_QAnNlmt7FwzNwHZnA",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/FjeN785fVWx0Pr6xCbwPhhq8hHj_gocc3FygDXYDEQgp2gE_FQzRNsFHFAjQ3oE-VJaeGR1a=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/FjeN785fVWx0Pr6xCbwPhhq8hHj_gocc3FygDXYDEQgp2gE_FQzRNsFHFAjQ3oE-VJaeGR1a=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/FjeN785fVWx0Pr6xCbwPhhq8hHj_gocc3FygDXYDEQgp2gE_FQzRNsFHFAjQ3oE-VJaeGR1a=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "lNjyqk3WKS8yBr1PeS8DA01zACc",
+			id: "-9inZYmp8kC1VZU67fT2WYd00dvgJass3otScbKhjTg",
+			snippet: {
+				publishedAt: "2023-04-25T09:57:29.59004Z",
+				title: "سنكرة SANKARA",
+				description:
+					"السلام عليكم واهلا بكم في قناتي المتواضعة\n\nقناة سنكرة  تقدم لكم كل شي جديد ومميز في عالم الالعاب وكل شي يخص التكنولوجيا\n القناة بإدارة أيمــن محمد\n\nMy name is Ayman \nand my Channel is all about PC gaming and PC tech in general\ni make videos about games.tech.explanations and reviews\n\nFor business \nsnkara.sy@gmail.com",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCNR623NFV3DbWpPTrA8cI_A",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqPe97CSd1zsTxyfeUwgnNJRb3G6rtKPDANUpzVGVg=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqPe97CSd1zsTxyfeUwgnNJRb3G6rtKPDANUpzVGVg=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqPe97CSd1zsTxyfeUwgnNJRb3G6rtKPDANUpzVGVg=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "GknQBv7OpuCRr-KMAcUmmnc6vV4",
+			id: "-9inZYmp8kD8lK2LsNU2fFRM04KoqR7kY6kRIVnKxOg",
+			snippet: {
+				publishedAt: "2020-07-29T03:01:19.229601Z",
+				title: "MahmoudIsmailTV",
+				description:
+					"انا محمود إسماعيل وفي القناة بعمل فيديوهات على الحاجات الي شغلة دماغي \n\nMIVB معناها\n Mahmoud Ismail Video Blog مدونة محمود إسماعيل البصرية\n\nومن وقت للتاني بعمل Sketches ومقاطع غريبة \n\nواي حاجة عاوز اتكلم فيها بترجمها بطريقة بصرية\n\nللتواصل والاعلان : Info@Mahmoudismailtv.com",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCdttmnJddGQZsXRL_DbqgWA",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqN5whunlqlf3cz9vHueYeN9D6Wcn_uf97uYlSI2xg=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqN5whunlqlf3cz9vHueYeN9D6Wcn_uf97uYlSI2xg=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqN5whunlqlf3cz9vHueYeN9D6Wcn_uf97uYlSI2xg=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "cwCquMMQwohjofm1czebASzkTTc",
+			id: "-9inZYmp8kD8lK2LsNU2fG_9o94soP27aPfOFluzbSU",
+			snippet: {
+				publishedAt: "2022-12-16T21:49:58.032976Z",
+				title: "Ramzy Abdelaziz رمزي عبدالعزيز",
+				description: "",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCn1CrIgAkpRpNXzH4z5h6zQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/k4e98CSb8miAzLyOPpikj0G3l3BrX1yikVJACHjGSSqdWlXGTwBeDwcvIPEppv-Q7IaQ1q-8Vw=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/k4e98CSb8miAzLyOPpikj0G3l3BrX1yikVJACHjGSSqdWlXGTwBeDwcvIPEppv-Q7IaQ1q-8Vw=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/k4e98CSb8miAzLyOPpikj0G3l3BrX1yikVJACHjGSSqdWlXGTwBeDwcvIPEppv-Q7IaQ1q-8Vw=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "zTu0e826htOpKsRMLtIfZugCje0",
+			id: "-9inZYmp8kC1VZU67fT2WW2UvFlNVPNaNeD7Lhm5i1E",
+			snippet: {
+				publishedAt: "2023-03-01T17:50:42.448832Z",
+				title: "Yehia Radwan يحيى رضوان",
+				description:
+					'أزيكو يا جماعة معاكو يحيى \n\nشوية حاجات بحبها\nتكنولوجيا || موبايلات || كاميرات || تصوير || مراجعات\n\n\nللأعمال "فقط" برجاء أستخدام البريد الإلكتروني\nFor business inquiries ONLY please use this Email\nContact@YehiaRadwan.com',
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCVJMlu9ObMGjDBkpTZkwpRg",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/0sdo2O2hZ7H3DS-LTjHQ1AkxLG8ld6fOcK1U15ACaOR6J8kzRu49pA5NPBG313x8QxrTSrLs6g=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/0sdo2O2hZ7H3DS-LTjHQ1AkxLG8ld6fOcK1U15ACaOR6J8kzRu49pA5NPBG313x8QxrTSrLs6g=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/0sdo2O2hZ7H3DS-LTjHQ1AkxLG8ld6fOcK1U15ACaOR6J8kzRu49pA5NPBG313x8QxrTSrLs6g=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "9Q-cQ5d1brHD9Qq0zaGbDV9kQdQ",
+			id: "-9inZYmp8kC1VZU67fT2WQTu-MhJGIEiTH4JdQBoOIU",
+			snippet: {
+				publishedAt: "2021-09-09T20:19:44.442881Z",
+				title: "المخبر الاقتصادي - Mokhbir Eqtisadi",
+				description:
+					"أنا أشرف إبراهيم، المخبر الاقتصادي، مصري، حاصل على الدكتوراة في الاقتصاد، وصاحب أكبر قناة يوتيوب عربية متخصصة في تبسيط المحتوى الاقتصادي.",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UC4kRorAXuIkyIX6vwXKaLWg",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/1WyjGoSd5LWXH2tfhUI9a9YupM5XFbzR-ySeeyWMhpJ4QhGae_CI2haD4EqL5vn3DX_9iob7AhQ=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/1WyjGoSd5LWXH2tfhUI9a9YupM5XFbzR-ySeeyWMhpJ4QhGae_CI2haD4EqL5vn3DX_9iob7AhQ=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/1WyjGoSd5LWXH2tfhUI9a9YupM5XFbzR-ySeeyWMhpJ4QhGae_CI2haD4EqL5vn3DX_9iob7AhQ=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "la6u8eY-wKheBlZPbEN870NfTNk",
+			id: "-9inZYmp8kC1VZU67fT2WbYQYve8_04Ims4EJD2GrVg",
+			snippet: {
+				publishedAt: "2023-03-21T19:12:19.469447Z",
+				title: "Ibrahim Adel",
+				description:
+					"السلام عليكم\nهذه القناة مخصصة للمحتوى الغير تعليمي مثل الاخبار الخاصة بالقنوات الاخرى او التطبيقات او توثيق أحداث او افكار معينة بالفيديو",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCQWryulEge9K1X4mx3iuJ-g",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ZwpLjpbAJ2EhDP2ZauFCbwdYk8S_F430Y8wmiSCi4tDqUestsNjSbbtfkWgFbVP_Whbra1qPf-8=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ZwpLjpbAJ2EhDP2ZauFCbwdYk8S_F430Y8wmiSCi4tDqUestsNjSbbtfkWgFbVP_Whbra1qPf-8=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ZwpLjpbAJ2EhDP2ZauFCbwdYk8S_F430Y8wmiSCi4tDqUestsNjSbbtfkWgFbVP_Whbra1qPf-8=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "TuXsraUstP-ZxCoJKYpCaIQNWcc",
+			id: "-9inZYmp8kC1VZU67fT2WT1Df4DnkSP51lipWEmjuJk",
+			snippet: {
+				publishedAt: "2022-03-11T18:37:37.193015Z",
+				title: "Web Dev Simplified",
+				description:
+					"Web Dev Simplified is all about teaching web development skills and techniques in an efficient and practical manner. If you are just getting started in web development Web Dev Simplified has all the tools you need to learn the newest and most popular technologies to convert you from a no stack to full stack developer. Web Dev Simplified also deep dives into advanced topics using the latest best practices for you seasoned web developers.\n\nI started Web Dev Simplified in order to share my passion for web development, and do what I truly love. Teach and inspire new web developers. I have been in love with full stack web development since 2015 when I did my first internship as a web developer. Ever since then I have pursued my passion, learning everything there is to know about web development. Over the years I have taught many colleagues and friends the joys of web development, and cannot wait to teach you.\n\nThank you for watching!",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCFbNIlppjAuEX4znoulh0Cw",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqMNnqfr-tuqVi_0YLkfx3-FGohChjCaNTNguHzp=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqMNnqfr-tuqVi_0YLkfx3-FGohChjCaNTNguHzp=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqMNnqfr-tuqVi_0YLkfx3-FGohChjCaNTNguHzp=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "WeLgTH5Tb75GqDXhVT8Ie6IAWMI",
+			id: "-9inZYmp8kDHMnGQjvagxS1KXAwYONgEd6I1a4ODtI8",
+			snippet: {
+				publishedAt: "2022-08-19T11:01:46.557144Z",
+				title: "Codezilla CodeCast - بودكاست البرمجة",
+				description:
+					"A programming podcast channel - a Codezilla sister channel.",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCAxfpXysReI8eLc-rQ_yorw",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/Va1Pe3Yn9dQgQW14Q0QSR9IUxa0S2g-iAUeuOl2XlIjP2KvI5l6UQ8zit-BDqxdIwW_2Kojj=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/Va1Pe3Yn9dQgQW14Q0QSR9IUxa0S2g-iAUeuOl2XlIjP2KvI5l6UQ8zit-BDqxdIwW_2Kojj=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/Va1Pe3Yn9dQgQW14Q0QSR9IUxa0S2g-iAUeuOl2XlIjP2KvI5l6UQ8zit-BDqxdIwW_2Kojj=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "hPnCk7pyOxTkwbec84o9sy3YVK0",
+			id: "-9inZYmp8kD8lK2LsNU2fPwj48NPjJ7swcmRNA1oPDk",
+			snippet: {
+				publishedAt: "2022-01-04T08:57:22.566852Z",
+				title: "غريب الشيخ || Ghareeb Elshaikh",
+				description:
+					"أنا غريب الشيخ، بشتغل في مجال ال Software Development والقناة دي عاملها علشان أشارك معاكم خبرتي المحدودة ونساعد بعض وننور الطريق للناس اللي عاوزة تدخل مجال البرمجة.\nللتواصل : contact@ghareeb.website",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCnGblT_CyMwswTIH9QmJ3YQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/gUZ6Jqst_1SoJSDJ6D6AybUizbdc0XC9YBEqHC5ug5VQbjfXELpW4PYYvewyivV43SEJ0s0LlDI=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/gUZ6Jqst_1SoJSDJ6D6AybUizbdc0XC9YBEqHC5ug5VQbjfXELpW4PYYvewyivV43SEJ0s0LlDI=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/gUZ6Jqst_1SoJSDJ6D6AybUizbdc0XC9YBEqHC5ug5VQbjfXELpW4PYYvewyivV43SEJ0s0LlDI=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "vj75foOXvcdodN0WblROhdM0C9U",
+			id: "-9inZYmp8kC1VZU67fT2WWMRRQloClIvYjUYPdCsRxw",
+			snippet: {
+				publishedAt: "2022-06-28T23:41:06.748761Z",
+				title: "Abouzaid Vlogs",
+				description: "",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCdNo5yauE8IU-vS8_dO3qew",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/7VVmI7XmlHBkxheIa7sMhxfnTGdONGUM1fw3Pl57bMjCNBv1xQQ3OC8IZ9nRtGEekCIRk-0qHQ=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/7VVmI7XmlHBkxheIa7sMhxfnTGdONGUM1fw3Pl57bMjCNBv1xQQ3OC8IZ9nRtGEekCIRk-0qHQ=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/7VVmI7XmlHBkxheIa7sMhxfnTGdONGUM1fw3Pl57bMjCNBv1xQQ3OC8IZ9nRtGEekCIRk-0qHQ=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "Yq3kuOGI1mjj976V9-BMsYwY7B8",
+			id: "-9inZYmp8kD5TSwh4oFEebn2igEvCsqZHcBdJV9HaaQ",
+			snippet: {
+				publishedAt: "2023-02-27T11:07:59.657549Z",
+				title: "Kai Notebook",
+				description:
+					"hey, i'm kai notebook! \n\n☁ ABOUT ME\n• 18, him he\n• future MD/DDS\n• loves reading and studying\n• procrastinates a lot and plays a lot of games\n• guitarist, pianist, and drummer\n• loves cooking food\n\n☁ if you want to get in touch with me, message me through my social media or shoot me an email!  i'll try my best to reply to everyone :) \n\n☁ i upload weekly~\n\n(if you are friends with me irl, don't you dare tell anyone about my channel)\n\n[for business purposes, use my business email provided below]",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCNhWSOlt_UoCzS2YSMhHYmA",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/p-TLb3aSdbKYBWnRyWYFEp3DS1rFW1Q909Zh9O_R_sXtZAXiKBemgTB2ehGELjFC_IvORHZF2g=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/p-TLb3aSdbKYBWnRyWYFEp3DS1rFW1Q909Zh9O_R_sXtZAXiKBemgTB2ehGELjFC_IvORHZF2g=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/p-TLb3aSdbKYBWnRyWYFEp3DS1rFW1Q909Zh9O_R_sXtZAXiKBemgTB2ehGELjFC_IvORHZF2g=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "VmCGNq3v7yA4axfdExZwAFphz-k",
+			id: "-9inZYmp8kBp_LpO1TkcwKnIGSKXPb7ZUjmM7pz94EA",
+			snippet: {
+				publishedAt: "2022-11-29T17:30:02.444669Z",
+				title: "قناة د محمد نوفل للشطرنج",
+				description:
+					"أهلا وسهلا بكل محبي لعبة الشطرنج في الوطن العربي. هنا تتعلم الشطرنج. تعلم حقيقته.  و مردوده في حياتك و طريقة تفكيرك . نورت",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCX6vJsr5GZtCQjt04x4r5nQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/L8Ige6Q4yhpBTLJxjf-FngRI1cwf7LaacVNpYmXKKfqpQHXxdQHPeSJbFTATThFOZyUkcrmU=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/L8Ige6Q4yhpBTLJxjf-FngRI1cwf7LaacVNpYmXKKfqpQHXxdQHPeSJbFTATThFOZyUkcrmU=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/L8Ige6Q4yhpBTLJxjf-FngRI1cwf7LaacVNpYmXKKfqpQHXxdQHPeSJbFTATThFOZyUkcrmU=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "Lv4A6aLxzqBGYbx3CRDUoBa8Dw8",
+			id: "-9inZYmp8kC1VZU67fT2WdgWM_uzmJQETZblyi0bMZ4",
+			snippet: {
+				publishedAt: "2023-03-20T14:22:39.579342Z",
+				title: "ForrestKnight",
+				description:
+					"My humble attempt at building my version of the digital world one step at a time by creating programming and computer science content to help those coming behind me.\n\nI've tracked my coding journey since 2016 by documenting my experiences as a (now-former) computer science student & (now-former) software engineer, all in an attempt to help others coming behind me. I believe there's a lot of value in seeing how someone else has done something, so I try to teach everything I learn in this programming and computer science space as I learn it. Now, I do YouTube full-time and am able to focus on hobby projects. Really, I'm just here to have fun with code lol. Enjoy!",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UC2WHjPDvbE6O328n17ZGcfg",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/avdsle4t42vMMUPALsh5wi5yD8CE2-ELOhwVjjd08OL1hUBobYaR1WhwACXjAdXe-VoESDwZ=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/avdsle4t42vMMUPALsh5wi5yD8CE2-ELOhwVjjd08OL1hUBobYaR1WhwACXjAdXe-VoESDwZ=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/avdsle4t42vMMUPALsh5wi5yD8CE2-ELOhwVjjd08OL1hUBobYaR1WhwACXjAdXe-VoESDwZ=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "95BKP4tlXed7np_cZJuAcm8cRtE",
+			id: "-9inZYmp8kDHMnGQjvagxRLqrjHyX8CESqbCNnVHJss",
+			snippet: {
+				publishedAt: "2023-01-09T04:18:26.265652Z",
+				title: "Elzero Tube",
+				description: "",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCQqN3qgYbkfd0EkdhJmN5tQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/pwgWsLfM-aqH6wd1wvCiBF0wTkRAYzpaZ0pITW3FLsxstJ7AjWFXetl8jWoLYbOVdEu6hS8jUds=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/pwgWsLfM-aqH6wd1wvCiBF0wTkRAYzpaZ0pITW3FLsxstJ7AjWFXetl8jWoLYbOVdEu6hS8jUds=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/pwgWsLfM-aqH6wd1wvCiBF0wTkRAYzpaZ0pITW3FLsxstJ7AjWFXetl8jWoLYbOVdEu6hS8jUds=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "c5f3GdG8umNp0cmeprekTZBmazk",
+			id: "-9inZYmp8kC1VZU67fT2WdsEBOsX5XUktC4TV23ZzJE",
+			snippet: {
+				publishedAt: "2023-01-31T19:45:38.759289Z",
+				title: "Fireship",
+				description:
+					"High-intensity ⚡ code tutorials to help you build & ship your app faster. Subscribe for new videos every week covering intermediate to advanced lessons about JavaScript, Flutter, Firebase, and modern app development.\n\nThe original home of #100SecondsOfCode and #CodeThisNotThat. Created by Jeff Delaney. \n\nBuilding an app? Get project support, advanced full courses, and more at https://fireship.io",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCsBjURrPoezykLs9EqgamOA",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqOSWK9LIZ9xGvDbBZ7gjBK1ayNCxK0jKMOq1FirfA=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqOSWK9LIZ9xGvDbBZ7gjBK1ayNCxK0jKMOq1FirfA=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqOSWK9LIZ9xGvDbBZ7gjBK1ayNCxK0jKMOq1FirfA=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "H52NWBz5RGfdZ0ebvZiUScU-jCI",
+			id: "-9inZYmp8kD8lK2LsNU2fGxW6RHxmKnIr1AMq91Y0Y0",
+			snippet: {
+				publishedAt: "2022-04-19T15:03:00.374224Z",
+				title: "devaslife",
+				description:
+					"I'm an indie app developer based in Osaka, Japan.\nI'm currently living off of my own product called Inkdrop - a Markdown note-taking app (https://www.inkdrop.app/ ).\nI would like to publish my videos about: how to build good apps, how to attract users, my hobbies, etc.\n\nNOTE: I don't answer any personal questions - Please don't send me emails.",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UC7yZ6keOGsvERMp2HaEbbXQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/a5wTd7vJ4FmYgL5LLjWkfBJCU2TLLafB8rSIZ39pYN4Aqul5yh2gUarS8yMCj7JOVplEh4WjKQ=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/a5wTd7vJ4FmYgL5LLjWkfBJCU2TLLafB8rSIZ39pYN4Aqul5yh2gUarS8yMCj7JOVplEh4WjKQ=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/a5wTd7vJ4FmYgL5LLjWkfBJCU2TLLafB8rSIZ39pYN4Aqul5yh2gUarS8yMCj7JOVplEh4WjKQ=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "N0lx7PvsRVYC8dlFuptXVjXMLlo",
+			id: "-9inZYmp8kBp_LpO1TkcwEoILaTfJTP3qTd2e4LJj3Y",
+			snippet: {
+				publishedAt: "2022-05-09T12:25:04.524187Z",
+				title: "Codezilla",
+				description:
+					"ان شاء الله تهدف قناة لتعليم البرمجة باللغة العربية، مقدمة اليكم من خبراء مجال التعليم و البرمجة، مجانا، و تناسب جميع الاعمار.\n\nتهدف القناة لتمكين شباب الوطن العربي و اعلاء مستواهم التقني البرمجي و ادراجهم في مجال التكنولوجيا حتى يتمكنوا من مواكبة سرعة التطور التكنولوجي بالعالم و نصبح وطن عربي قوي.\n\nتمكنك البرمجة من العمل من اي مكان و برواتب ممتازة نظرا لكثرة الطلب في سوق العمل و سرعة نموه.",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCveX_0uBOHVHbpV838OGXVA",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqO88pSLe3-79rxaqDMvFSqCEadQBrD_y3Q0L89hag=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqO88pSLe3-79rxaqDMvFSqCEadQBrD_y3Q0L89hag=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqO88pSLe3-79rxaqDMvFSqCEadQBrD_y3Q0L89hag=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "xuV7LbUQla1lFcgu9DdgnezPLYQ",
+			id: "-9inZYmp8kBp_LpO1TkcwOuxJHPN6eSIsnYk-F0sQuA",
+			snippet: {
+				publishedAt: "2022-04-14T05:19:45.384778Z",
+				title: "JavaScript Mastery",
+				description:
+					"Launch your development career with project-based coaching - showcase your skills with practical development experience and land the coding career of your dreams. Check out jsmastery.pro to learn more.",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCmXmlB4-HJytD7wek0Uo97A",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/wg1TITEoPfxvBGfzuqWyt3bqm_qu35ZhMswUv3feetU3xNX_6wsAXZF40OlPIgY4TmqbqCmAZ1U=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "GRi-4WrlGZfn8Gcqhs8bAGi77Bc",
+			id: "-9inZYmp8kD8lK2LsNU2fI7NpH29Sp2riGOWQJBijp8",
+			snippet: {
+				publishedAt: "2022-06-19T07:34:50.923889Z",
+				title: "Crypto Hasan",
+				description: "تحليل وشرح كل ما يخص العملات الرقمية وتفنيات البلوك تشين",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCKU8us__SJpW0JCOMqfbzVw",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/mLksIB0NrJRL4KyvTdo3kKKVkumlSjJVrE0gn7elqp2L9gbB9iQAlRYoLJ0-b_wetnlct5ghHQ=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/mLksIB0NrJRL4KyvTdo3kKKVkumlSjJVrE0gn7elqp2L9gbB9iQAlRYoLJ0-b_wetnlct5ghHQ=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/mLksIB0NrJRL4KyvTdo3kKKVkumlSjJVrE0gn7elqp2L9gbB9iQAlRYoLJ0-b_wetnlct5ghHQ=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "3DUf-ptEb9PlM_0ClzH3RHGaW8k",
+			id: "-9inZYmp8kD8lK2LsNU2fOC2OoW3T_kTzERom0Dj-pY",
+			snippet: {
+				publishedAt: "2023-02-24T08:24:43.942271Z",
+				title: "اسرار طيور الحب",
+				description:
+					"هتابع اخبار السوق واللي حاصل فيه كل سوق جمع وأحد وبث مباشر للسوق كل يوم جمعة وأحد مباشر من السوق وبنجيبلك افضل عروض بيع من الغواة من السوق مباشرة وبأفضل الاسعار لو غاوي عصافير بنساعدك مجانا في شراء العصافير اللي بتحبها من السوق",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCBkObb2X4Si3IeW1Cga5maw",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/Sj3C4yaICvgVPSwVtYNOTHcq00eCpYgN0Ryo2ZSvaAY6Uco-5wJyMAawYTXAWZJDj4-GYfRTTho=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/Sj3C4yaICvgVPSwVtYNOTHcq00eCpYgN0Ryo2ZSvaAY6Uco-5wJyMAawYTXAWZJDj4-GYfRTTho=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/Sj3C4yaICvgVPSwVtYNOTHcq00eCpYgN0Ryo2ZSvaAY6Uco-5wJyMAawYTXAWZJDj4-GYfRTTho=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "JUo5NNL0OKJC7R6W-Cw6ya-5-nc",
+			id: "-9inZYmp8kD5TSwh4oFEeTq0XXEVDtbW8smilkyiqLE",
+			snippet: {
+				publishedAt: "2023-03-05T08:09:09.889751Z",
+				title: "Lama Dev",
+				description:
+					"Web development tutorials for everyone. Learn JavaScript, React.js, Node.js, and find inspiration for HTML, CSS, and web design with Lama and become a web developer.\n\nSocial Media:\nFacebook: https://www.facebook.com/groups/lamadev\nInstagram: https://www.instagram.com/lamawebdev\nDiscord: https://discord.gg/yKremu4mPr\nTwitter: https://twitter.com/lamaWebDev\n\nFor business inquiries:\ncontact@lama.dev",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCOxWrX5MIdXIeRNaXC3sqIg",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqNbXSjabMNTuGUb9upVn4fma_RVIGHVT2UNEk8e=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqNbXSjabMNTuGUb9upVn4fma_RVIGHVT2UNEk8e=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqNbXSjabMNTuGUb9upVn4fma_RVIGHVT2UNEk8e=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "xkoJEBHTxu5lIRf04gPNlv65_KM",
+			id: "-9inZYmp8kDHMnGQjvagxf-SJbnVW-p-VEWI1jm9dgk",
+			snippet: {
+				publishedAt: "2023-03-22T04:35:17.909019Z",
+				title: "OctuCode Shorts",
+				description: "",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UC641caW49rm714AC2UabBeA",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/aNKTnzWlOSdQK_RFVwMGrVpuC3amoeL26R1ai9I1ZWYZK2rKo6ijhBYIEKDqNsvG_iuIgT9P=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/aNKTnzWlOSdQK_RFVwMGrVpuC3amoeL26R1ai9I1ZWYZK2rKo6ijhBYIEKDqNsvG_iuIgT9P=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/aNKTnzWlOSdQK_RFVwMGrVpuC3amoeL26R1ai9I1ZWYZK2rKo6ijhBYIEKDqNsvG_iuIgT9P=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "ysjm5_9SysNg2DtbGTDbmpbLhOI",
+			id: "-9inZYmp8kD8lK2LsNU2fKwdgGP_PL3Nj0uqoDd96Vg",
+			snippet: {
+				publishedAt: "2022-05-09T12:24:45.209854Z",
+				title: "Islam Codezilla",
+				description: "",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCHBq980JT8dra4eMydVpcOA",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/kS99F0WiTP9bZXALfM7P6-2sZwGqd2wSqhBHdtnufnyItkpGF_peUCTY8zRPC41TPjzo00CHyA=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/kS99F0WiTP9bZXALfM7P6-2sZwGqd2wSqhBHdtnufnyItkpGF_peUCTY8zRPC41TPjzo00CHyA=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/kS99F0WiTP9bZXALfM7P6-2sZwGqd2wSqhBHdtnufnyItkpGF_peUCTY8zRPC41TPjzo00CHyA=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "wYEOZap-TqZFEEOj29nKk9DPrq4",
+			id: "-9inZYmp8kC1VZU67fT2WZ9OTqoguCTDruQ9Sfv2bD4",
+			snippet: {
+				publishedAt: "2023-04-09T12:19:49.274372Z",
+				title: "codeZone",
+				description:
+					"Programming channel for doing fancy stuff using programming languages specially javascript",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UChCMIwQrelEqLZT7Lt1L5Og",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/gvn2IhhzbJIcOmmtBueQ9546BtP-83CDT8fIf1mc8aULfNFj1WsNqJkEUps3gkWeFrCErwDe0A=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/gvn2IhhzbJIcOmmtBueQ9546BtP-83CDT8fIf1mc8aULfNFj1WsNqJkEUps3gkWeFrCErwDe0A=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/gvn2IhhzbJIcOmmtBueQ9546BtP-83CDT8fIf1mc8aULfNFj1WsNqJkEUps3gkWeFrCErwDe0A=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "13vSuS91QfidIzIe8tppZFf6jPQ",
+			id: "-9inZYmp8kD8lK2LsNU2fFx4GaJMVcP0ZY9Vy41iBrw",
+			snippet: {
+				publishedAt: "2022-08-14T07:28:49.727649Z",
+				title: "Ahmed Amer",
+				description: "",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCah56qawts736uNxZA3inLQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqMTiCN65p2ZFAOJ4G0So33I_4ScBH4SGiR2Y-RFbQ=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqMTiCN65p2ZFAOJ4G0So33I_4ScBH4SGiR2Y-RFbQ=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqMTiCN65p2ZFAOJ4G0So33I_4ScBH4SGiR2Y-RFbQ=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "1ns2LZel1FpF5UFmZs3NndgV-Q4",
+			id: "-9inZYmp8kD8lK2LsNU2fPdWv4stFttOKsXcR6nG_uQ",
+			snippet: {
+				publishedAt: "2022-06-12T09:10:07.568081Z",
+				title: "Mohamed Elsherif",
+				description:
+					"Software Engineering topics and discussions, podcast and some times video tutorials.",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCi9DV7ai7a8-XgRt5iH9d7Q",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqNg56_3wx2XWGFkwQC9PZ3ySu3VfGRtc70Br9DX8Jc=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqNg56_3wx2XWGFkwQC9PZ3ySu3VfGRtc70Br9DX8Jc=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqNg56_3wx2XWGFkwQC9PZ3ySu3VfGRtc70Br9DX8Jc=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "7Ryd4cPQ1WCH0mItNbx5hrFT6XE",
+			id: "-9inZYmp8kDHMnGQjvagxRujk_eXL-TU-IBgGHEkDSk",
+			snippet: {
+				publishedAt: "2023-01-31T19:40:22.244456Z",
+				title: "Beyond Fireship",
+				description:
+					"Even more highly-focused blazingly-fast coding tutorials from Fireship",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UC2Xd-TjJByJyK2w1zNwY0zQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/3MC9XX7rtxeS55uoOQG2nvJ7zaBd17r8Uh0yk_R3KyKjAK_u4RlHhZcTCkx4yym0guGWdefD5Q=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/3MC9XX7rtxeS55uoOQG2nvJ7zaBd17r8Uh0yk_R3KyKjAK_u4RlHhZcTCkx4yym0guGWdefD5Q=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/3MC9XX7rtxeS55uoOQG2nvJ7zaBd17r8Uh0yk_R3KyKjAK_u4RlHhZcTCkx4yym0guGWdefD5Q=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "aijvan56bSrz56N_Cu11toZkk20",
+			id: "-9inZYmp8kD5TSwh4oFEeYNML1auVyYMrJSoIFj_i74",
+			snippet: {
+				publishedAt: "2023-02-23T19:02:21.928314Z",
+				title: "مصطفى زينهم",
+				description:
+					"تقارير اسبوعية مباشرة من السوق يومي الجمعة والاحد لاسعار العصافير وحركة البيع والشراء واسعار الاقفاص والسلاكات والمستلزمات وعروض بيع من مشتركين القناة والطرق المثالية لرعاية وتربية طيور الزينه وكل ما يتعلق بها من تغذية وادوية وفيتامينات",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCR6comg-Pe6aQDMrKNU5RJQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/oa_RBOhjjEqJ4QjsspBfFGhJQxafhFz1hB7Jlyo0OoXGt8eRZ9-PNlslUsQqW_nRPfXps0l_=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/oa_RBOhjjEqJ4QjsspBfFGhJQxafhFz1hB7Jlyo0OoXGt8eRZ9-PNlslUsQqW_nRPfXps0l_=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/oa_RBOhjjEqJ4QjsspBfFGhJQxafhFz1hB7Jlyo0OoXGt8eRZ9-PNlslUsQqW_nRPfXps0l_=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "ZpZ-ARpUDr90sPV-ayf3bF04sN8",
+			id: "-9inZYmp8kDHMnGQjvagxa7nyN9RZOdpBcddLJdGkgc",
+			snippet: {
+				publishedAt: "2023-04-30T01:50:17.116978Z",
+				title: "Codezilla Academy",
+				description:
+					"اكاديمية كودزيلا لتعلم كل ما يتعلق بعالم البرمجة و المهارات الرقمية",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCwz3RDqQTxPJ3c3phqWGBwQ",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/RWZK0di6M8RroZXpVIbFph1ZwLnLWA8YIO9sJqYUfbsmYBe52C0tq8QC3Zk2cqWSqStEZ23Q6bM=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/RWZK0di6M8RroZXpVIbFph1ZwLnLWA8YIO9sJqYUfbsmYBe52C0tq8QC3Zk2cqWSqStEZ23Q6bM=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/RWZK0di6M8RroZXpVIbFph1ZwLnLWA8YIO9sJqYUfbsmYBe52C0tq8QC3Zk2cqWSqStEZ23Q6bM=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "AJdowSNoYHKJ_0mbSLf8CdmHb24",
+			id: "-9inZYmp8kD8lK2LsNU2fFQYfhWB1BZLHwIxRAVE1wE",
+			snippet: {
+				publishedAt: "2023-02-03T19:04:00.614049Z",
+				title: "Walid Taha",
+				description:
+					"Walid Taha AKA Welsh.\nوليد طه صانع محتوى مصري مقيم في إنجلترا.\nكاتب ومصور، مهتم بالتكنولوجيا ومؤمن بالتعلم الذاتي\n\nدعم القناة: https://www.youtube.com/channel/UCIL3YfRG2k7V9EDC3jzy-kg/join\nEmail me at walidtaha@the-creator.uk \nPodcast: https://anchor.fm/welshcast\nTwitter: https://twitter.com/_WalidTaha",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCIL3YfRG2k7V9EDC3jzy-kg",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/nQYGVASFA2YrH0voSZryBVqcidD8qXm9N50LRtom-QBfCidnZKSO0JB2qouYAWKyWlbQCJvrRcA=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/nQYGVASFA2YrH0voSZryBVqcidD8qXm9N50LRtom-QBfCidnZKSO0JB2qouYAWKyWlbQCJvrRcA=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/nQYGVASFA2YrH0voSZryBVqcidD8qXm9N50LRtom-QBfCidnZKSO0JB2qouYAWKyWlbQCJvrRcA=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "VfpUq1ucsWwWJ3XnyHseYsUjrXI",
+			id: "-9inZYmp8kD8lK2LsNU2fNSwp_TCezVb1oSUKBgz0Lo",
+			snippet: {
+				publishedAt: "2022-10-17T10:18:03.897634Z",
+				title: "Karim Mesallam — كريم مسلَّم",
+				description:
+					"هدفى هو الإرتقاء بمستوي الفرد العربى المستعد للتعلم عن طريق تسهيل طريقه فى ان يكون عامل حر و مستقل محترف, قادر على المنافسة بشكل فعال, يجنى ثمار هذا ماديا و معنويا فى إدراكه و إستفادته من الحرية المطلقة التى بالتبعية تدفعه للإستثمار فى نفسه اكثر و اكثر.",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCF8nUQJCIN5umZZn_IzLp-w",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/YFntUGXqua-6c4sn19TcgYx9PP5gLokAnJyLw9B9VbymI0wDkVSS4vhQX2IxtQQdFzJxsz3cjg=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/YFntUGXqua-6c4sn19TcgYx9PP5gLokAnJyLw9B9VbymI0wDkVSS4vhQX2IxtQQdFzJxsz3cjg=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/YFntUGXqua-6c4sn19TcgYx9PP5gLokAnJyLw9B9VbymI0wDkVSS4vhQX2IxtQQdFzJxsz3cjg=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "VDbLNNBFZBNu71Eim3aFCG_Kwgg",
+			id: "-9inZYmp8kD8lK2LsNU2fMPhpk6h9NuEjxrmZauxtOQ",
+			snippet: {
+				publishedAt: "2022-05-22T08:36:41.957797Z",
+				title: "Mohamed Abusrea - محمد أبوسريع",
+				description:
+					"أقدم محتوي يساعد المهتمين بمجال البرمجة فى التعرف علي المجال بشكل أفضل وأشارك أيضا بعض النصائح والادوات المفيدة لزيادة إنتاجيتك وتسهيل عملك كمبرمج.\n\nوهذه قائمة ببعض أعمالي:\n- برنامج (Quran Tab) على متجر الكروم: https://bit.ly/qt-chrome\n- برنامج (Quran Station) على متجر الكروم: https://bit.ly/qs-chrome\n- برنامج (Quran Station) على متجر فايرفوكس: https://bit.ly/qs-firefox",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCJu5uNExWKx1Vrv6Ah5SHfA",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/EZ5OofHPE36ZV_dI0es2i1vxb8rGx1IvnTD7lmPKBtVwc5W-77wDcM8ncuWTaJewZdf0d6s-=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/EZ5OofHPE36ZV_dI0es2i1vxb8rGx1IvnTD7lmPKBtVwc5W-77wDcM8ncuWTaJewZdf0d6s-=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/EZ5OofHPE36ZV_dI0es2i1vxb8rGx1IvnTD7lmPKBtVwc5W-77wDcM8ncuWTaJewZdf0d6s-=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "yddwoUGUH5eAMwkBGU8r8QlXY4w",
+			id: "-9inZYmp8kD8lK2LsNU2fEc4EyOFh6xed1BDZKnPXOw",
+			snippet: {
+				publishedAt: "2021-09-21T19:16:04.017802Z",
+				title: "Online Tutorials",
+				description:
+					"﷽\nOnline Tutorials is a channel for learning Complete responsive website design, Creative CSS animation and Hover Effects,Amazing Vanilla Javascript projects, creative UX and UI Design using Html and CSS and much more... Htm5, CSS3, Javascript,jQuery,Bootstrap, photoshop, Website Design\n\nChannel Managed By : Muhammad Irshad - INDIA\n\nwww.onlinetutorialsweb.com",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCbwXnUipZsLfUckBPsC7Jog",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqN3GHZYdwGIni9ST_wGoa2lYYM5mJW_NlgccjcUKQ=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqN3GHZYdwGIni9ST_wGoa2lYYM5mJW_NlgccjcUKQ=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqN3GHZYdwGIni9ST_wGoa2lYYM5mJW_NlgccjcUKQ=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+		{
+			kind: "youtube#subscription",
+			etag: "G0ks1F3S2hPmjtOl608TKXQVsm0",
+			id: "-9inZYmp8kD8lK2LsNU2fLKJyJKjNugJ3fQge2d1Rnc",
+			snippet: {
+				publishedAt: "2021-08-31T16:31:29.37911Z",
+				title: "Kevin Powell",
+				description:
+					"Helping you learn how to make the web, and make it look good while you're at it.\n\nWith videos every Tuesday and Thursday, I'll be bringing you How Tos and Tutorials, as well as simple tips and tricks, with a big focus on helping people see how wonderful CSS is!",
+				resourceId: {
+					kind: "youtube#channel",
+					channelId: "UCJZv4d5rbIKd4QHMPkcABCw",
+				},
+				channelId: "UCbl-Sujxe1rQZmnwGbdSO9w",
+				thumbnails: {
+					default: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqO75zI4wxY-anTPFwqkwezrDO6wqR5KZkFzhSzL9w=s88-c-k-c0x00ffffff-no-rj",
+					},
+					medium: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqO75zI4wxY-anTPFwqkwezrDO6wqR5KZkFzhSzL9w=s240-c-k-c0x00ffffff-no-rj",
+					},
+					high: {
+						url: "https://yt3.ggpht.com/ytc/AGIKgqO75zI4wxY-anTPFwqkwezrDO6wqR5KZkFzhSzL9w=s800-c-k-c0x00ffffff-no-rj",
+					},
+				},
+			},
+		},
+	],
+}

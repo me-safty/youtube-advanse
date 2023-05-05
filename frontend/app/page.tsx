@@ -1,7 +1,8 @@
 import Feed from "@/components/Feed"
 import { Video } from "@/typing"
-import subscriptions from "@/lib/subscriptions"
+import subscriptions, { feed } from "@/lib/subscriptions"
 import SubscriptionsFeed from "@/components/SubscriptionsFeed"
+import { ChannelsBar } from "@/components/ChannelsBar"
 
 // async function getData() {
 // 	try {
@@ -55,29 +56,31 @@ const channelIds = [
 	"UCQqN3qgYbkfd0EkdhJmN5tQ",
 	"UCah56qawts736uNxZA3inLQ",
 	"UCF8nUQJCIN5umZZn_IzLp-w",
+	"UC-4KnPMmZzwAzW7SbVATUZQ",
+	"UCdttmnJddGQZsXRL_DbqgWA",
 ]
 
-// async function getData(channelId: string) {
-// 	try {
-// 		const res = await fetch(
-// 			`https://yt-api.p.rapidapi.com/channel/videos?id=${channelId}`,
-// 			{
-// 				next: { revalidate: 7000 },
-// 				method: "GET",
-// 				// @ts-ignore
-// 				headers: {
-// 					// "content-type": "application/octet-stream",
-// 					"X-RapidAPI-Key": process.env.RAPID_API_KEY,
-// 					"X-RapidAPI-Host": "yt-api.p.rapidapi.com",
-// 				},
-// 			}
-// 		)
+async function getData(channelId: string) {
+	try {
+		const res = await fetch(
+			`https://yt-api.p.rapidapi.com/channel/videos?id=${channelId}`,
+			{
+				next: { revalidate: 7000 },
+				method: "GET",
+				// @ts-ignore
+				headers: {
+					// "content-type": "application/octet-stream",
+					"X-RapidAPI-Key": process.env.RAPID_API_KEY,
+					"X-RapidAPI-Host": "yt-api.p.rapidapi.com",
+				},
+			}
+		)
 
-// 		return res.json()
-// 	} catch (e) {
-// 		console.log(e)
-// 	}
-// }
+		return res.json()
+	} catch (e) {
+		console.log(e)
+	}
+}
 
 const demoVideos: Video[] = [
 	{
@@ -331,12 +334,12 @@ const demoVideos: Video[] = [
 export default async function Home() {
 	// UCKUOmGXE9Ytlc2EzpGqimtw
 	// const getSubscriptionsData = await getData()
-	// const subscriptionsData = channelIds.map((id) => getData(id))
-	// const data = await Promise.all(subscriptionsData)
+	const subscriptionsData = channelIds.map((id) => getData(id))
+	const data = await Promise.all(subscriptionsData)
 	// const channels = subscriptions.map((e) => e.meta)
-	// const videos = data
-	const videos = subscriptions
-		.map((e) => e.data.slice(0, 10))
+	const videos = data
+		// const videos = subscriptions
+		.map((e) => e.data.slice(0, 30))
 		.flat()
 		.sort(
 			(a, b) =>
@@ -358,6 +361,8 @@ export default async function Home() {
 			{/* {newData.map((channel) => (
 				// <SubscriptionsFeed channel={channel} />
 			))} */}
+			{/* @ts-ignore */}
+			<ChannelsBar channels={feed.items} />
 			{/* @ts-ignore */}
 			<SubscriptionsFeed videos={videos} />
 		</>
