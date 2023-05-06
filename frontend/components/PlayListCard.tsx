@@ -16,7 +16,7 @@ const PlayListCard = ({ playlist }: PlayListCardProps) => {
 			>
 				<div className="relative w-full rounded-xl overflow-hidden">
 					<Image
-						className="w-full object-cover max-h-[150px]"
+						className="w-full object-cover h-[50vw] sm:h-[13vw] lg:h-[11vw]"
 						src={playlist.snippet.thumbnails.high.url}
 						alt={playlist.snippet.title}
 						width={playlist.snippet.thumbnails.high.width || "480"}

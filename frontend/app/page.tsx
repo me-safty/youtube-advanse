@@ -68,26 +68,26 @@ const channelIds = [
 	// "UCdNo5yauE8IU-vS8_dO3qew",
 ]
 
-async function getData(channelId: string) {
-	try {
-		const res = await fetch(
-			`https://yt-api.p.rapidapi.com/channel/videos?id=${channelId}`,
-			{
-				next: { revalidate: 7000 },
-				method: "GET",
-				// @ts-ignore
-				headers: {
-					// "content-type": "application/octet-stream",
-					"X-RapidAPI-Key": process.env.RAPID_API_KEY,
-					"X-RapidAPI-Host": "yt-api.p.rapidapi.com",
-				},
-			}
-		)
-		return res.json()
-	} catch (e) {
-		console.log(e)
-	}
-}
+// async function getData(channelId: string) {
+// 	try {
+// 		const res = await fetch(
+// 			`https://yt-api.p.rapidapi.com/channel/videos?id=${channelId}`,
+// 			{
+// 				next: { revalidate: 7000 },
+// 				method: "GET",
+// 				// @ts-ignore
+// 				headers: {
+// 					// "content-type": "application/octet-stream",
+// 					"X-RapidAPI-Key": process.env.RAPID_API_KEY,
+// 					"X-RapidAPI-Host": "yt-api.p.rapidapi.com",
+// 				},
+// 			}
+// 		)
+// 		return res.json()
+// 	} catch (e) {
+// 		console.log(e)
+// 	}
+// }
 
 const demoVideos: Video[] = [
 	{
@@ -339,11 +339,11 @@ const demoVideos: Video[] = [
 ]
 
 export default async function Home() {
-	const subscriptionsData = subs.map((sub) => getData(sub.id))
-	const data = await Promise.all(subscriptionsData)
+	// const subscriptionsData = subs.map((sub) => getData(sub.id))
+	// const data = await Promise.all(subscriptionsData)
 	// const channels = subscriptions.map((e) => e.meta)
-	const videos = data
-		// const videos = subscriptions
+	// const videos = data
+	const videos = subscriptions
 		.map((e) => e.data.slice(0, 10))
 		.flat()
 		.sort(

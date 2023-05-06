@@ -14,7 +14,7 @@ const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 	return (
 		<div>
 			<iframe
-				className="w-full h-[53vw]"
+				className="w-full h-[380px] sm:h-[53vw]"
 				src={`https://www.youtube.com/embed/${id}`}
 				title={"video_title"}
 				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -22,9 +22,11 @@ const VideoDetailsPage = ({ video, id }: VideoDetailsPageProps) => {
 			></iframe>
 			<div className="container">
 				<div className="mx-4 text-white">
-					<h1 className="text-white text-3xl mt-3">{video.snippet.title}</h1>
+					<h1 className="text-white text-xl sm:text-3xl mt-3">
+						{video.snippet.title}
+					</h1>
 					<Link href={`/channels/${video.snippet.channelId}/v`}>
-						<h2 className="my-2 text-gray-500 text-xl inline-block">
+						<h2 className="my-2 text-gray-500 text-lg inline-block">
 							{video.snippet.channelTitle}
 						</h2>
 					</Link>

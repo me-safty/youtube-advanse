@@ -24,28 +24,25 @@ const ChannelPage = ({ channel }: ChannelPageProps) => {
 						width={channel.snippet.thumbnails.high.width}
 						height={channel.snippet.thumbnails.high.height}
 						alt="channel image"
-						className="w-[150px] h-[150px] rounded-full"
+						className="w-[80px] h-[80px] sm:w-[150px] sm:h-[150px] rounded-full"
 					/>
-					<div className="">
+					<div className="text-center sm:text-left">
 						<h1 className="text-white text-2xl mb-2">
 							{channel.snippet.title}
 						</h1>
-						<div className="flex items-center gap-2">
-							<p className="text-gray-400 text-lg">
-								{channel.snippet.customUrl}
-							</p>
-							<p className="text-gray-400 text-lg">
+						<div className="flex items-center gap-2 flex-col sm:flex-row sm:text-lg">
+							<p className="text-gray-400">{channel.snippet.customUrl}</p>
+							<p className="text-gray-400">
 								{Number(channel.statistics.subscriberCount).toLocaleString()}{" "}
 								Subscription
 							</p>
-							<p className="text-gray-400 text-lg">
+							<p className="text-gray-400">
 								{Number(channel.statistics.videoCount).toLocaleString()} Video
 							</p>
 						</div>
 						<p
-							className="overflow-hidden text-lg text-gray-400 [direction]:[rtl]"
+							className="overflow-hidden h-[calc(1 * 1rem * 1.50)] sm:h-[calc(1 * 1rem * 1.75)] sm:text-lg text-gray-400 [direction]:[rtl]"
 							style={{
-								height: "calc(1 * 1rem * 1.75)",
 								display: "-webkit-box",
 								WebkitBoxOrient: "vertical",
 								WebkitLineClamp: "1",
@@ -55,14 +52,6 @@ const ChannelPage = ({ channel }: ChannelPageProps) => {
 						</p>
 					</div>
 				</div>
-				{/* <iframe
-				width="640"
-				height="360"
-				src="http://www.youtube.com/embed/videoseries?list=PL7PzPXcv-qixZCAGXILiGlYOP8HrDhqhu"
-				allow=" accelerometer; autoplay; clipboard-write;
-				encrypted-media; gyroscope; picture-in-picture;"
-				allowfullscreen
-			></iframe> */}
 				<div className="text-white my-1 flex gap-1">
 					<Link href={`/channels/${channel.id}/v`}>
 						<button className="bg-white bg-opacity-5 px-2 py-1 rounded-lg">

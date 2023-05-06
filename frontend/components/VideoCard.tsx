@@ -12,7 +12,7 @@ const VideoCard = ({ video }: VideoCardProps) => {
 		<div className="w-full">
 			<Link href={`/videos/${video.id.videoId}`}>
 				<Image
-					className="w-full object-cover h-[50vw] sm:h-[13vw] lg:h-[11vw]  rounded-xl"
+					className="w-full object-cover h-[50vw] sm:h-[13vw] lg:h-[11vw] rounded-xl"
 					src={video.snippet.thumbnails.high.url}
 					alt={video.snippet.title}
 					width={video.snippet.thumbnails.high.width || "480"}
