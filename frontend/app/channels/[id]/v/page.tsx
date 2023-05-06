@@ -1,9 +1,5 @@
-"use client"
-
 import Feed from "@/components/Feed"
-import useInView from "@/lib/useInView"
 import { notFound } from "next/navigation"
-import { useEffect, useRef, useState } from "react"
 
 async function getChannelVideos(channelId: string) {
 	const maxVideos = 8
@@ -268,45 +264,9 @@ async function getChannelVideos(channelId: string) {
 const page = async ({ params: { id } }: { params: { id: string } }) => {
 	const channelVideos = await getChannelVideos(id)
 	if (!channelVideos.items[0]) return notFound()
-	// const [myRef, isVisible] = useInView()
-	// const myRef = useRef()
-	// const [isVisible, setIsVisible] = useState<boolean>(false)
-	// useEffect(() => {
-	// 	const observer = new IntersectionObserver((entries) => {
-	// 		const entry = entries[0]
-	// 		setIsVisible(entry.isIntersecting)
-	// 	})
-	// 	observer.observe(myRef.current as unknown as Element)
-	// 	console.log(myRef, isVisible)
-	// })
 	return (
 		<div className="">
-			{/* @ts-ignore */}
 			<Feed data={channelVideos.items} />
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			<div className="">fefef</div>
-			{/* <div
-				className="text-white"
-				ref={myRef as unknown as React.LegacyRef<HTMLDivElement>}
-			>
-				fefef
-			</div> */}
 		</div>
 	)
 }

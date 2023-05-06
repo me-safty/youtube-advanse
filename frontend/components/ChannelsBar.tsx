@@ -10,23 +10,34 @@ export const ChannelsBar = ({ channels }: ChannelBarProps) => {
 		<div className="container">
 			<div
 				style={{ scrollbarWidth: "thin", scrollbarColor: "#888 #f1f1f1" }}
-				className="py-3 my-1 flex gap-3 overflow-x-scroll [scrollbar-width:5px] [scrollbar-color:#888]"
+				className="py-3 my-1 flex gap-5 overflow-x-scroll [scrollbar-width:5px] [scrollbar-color:#888]"
 			>
 				{channels.map((channel) => (
 					<Link
-						// @ts-ignore
-						key={channel.snippet.resourceId.channelId as unknown as string}
-						// @ts-ignore
-						href={`/channels/${channel.snippet.resourceId.channelId}/v`}
-						className="min-w-[50px] min-h-[50px] max-w-[50px] max-h-[50px]"
+						key={channel.snippet.resourceId?.channelId}
+						href={`/channels/${channel.snippet.resourceId?.channelId}/v`}
+						className="	max-w-[60px]"
 					>
-						<Image
-							src={channel.snippet.thumbnails.high.url}
-							alt="channel image"
-							width={50}
-							height={50}
-							className=" rounded-full w-full h-full object-cover"
-						/>
+						<div className="min-w-[60px] min-h-[60px] max-w-[60px] max-h-[60px]">
+							<Image
+								src={channel.snippet.thumbnails.high.url}
+								alt="channel image"
+								width={50}
+								height={50}
+								className=" rounded-full w-full h-full object-cover"
+							/>
+						</div>
+						<p
+							className="my-1 overflow-hidden text-gray-500 text-xs text-center"
+							style={{
+								height: "calc(1 * 1rem * 1)",
+								display: "-webkit-box",
+								WebkitBoxOrient: "vertical",
+								WebkitLineClamp: "1",
+							}}
+						>
+							{channel.snippet.title}
+						</p>
 					</Link>
 				))}
 			</div>

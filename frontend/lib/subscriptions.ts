@@ -5699,3 +5699,72 @@ export const feed = {
 		},
 	],
 }
+
+export const subscriptionId = [
+	{ title: "Sonny Sangha", id: "UCqeTj_QAnNlmt7FwzNwHZnA" },
+
+	{ title: "Ibrahim Adel", id: "UCQWryulEge9K1X4mx3iuJ-g" },
+	{ title: "Web Dev Simplified", id: "UCFbNIlppjAuEX4znoulh0Cw" },
+
+	{ title: "ForrestKnight", id: "UC2WHjPDvbE6O328n17ZGcfg" },
+	{ title: "Fireship", id: "UCsBjURrPoezykLs9EqgamOA" },
+	{ title: "devaslife", id: "UC7yZ6keOGsvERMp2HaEbbXQ" },
+	{ title: "Codezilla", id: "UCveX_0uBOHVHbpV838OGXVA" },
+	{ title: "JavaScript Mastery", id: "UCmXmlB4-HJytD7wek0Uo97A" },
+	{ title: "Crypto Hasan", id: "UCKU8us__SJpW0JCOMqfbzVw" },
+	{ title: "اسرار طيور الحب", id: "UCBkObb2X4Si3IeW1Cga5maw" },
+	{ title: "Lama Dev", id: "UCOxWrX5MIdXIeRNaXC3sqIg" },
+	{ title: "OctuCode Shorts", id: "UC641caW49rm714AC2UabBeA" },
+	{ title: "Islam Codezilla", id: "UCHBq980JT8dra4eMydVpcOA" },
+	{ title: "codeZone", id: "UChCMIwQrelEqLZT7Lt1L5Og" },
+	{ title: "Mohamed Elsherif", id: "UCi9DV7ai7a8-XgRt5iH9d7Q" },
+	{ title: "Beyond Fireship", id: "UC2Xd-TjJByJyK2w1zNwY0zQ" },
+	{ title: "مصطفى زينهم", id: "UCR6comg-Pe6aQDMrKNU5RJQ" },
+	{ title: "Codezilla Academy", id: "UCwz3RDqQTxPJ3c3phqWGBwQ" },
+	{ title: "Walid Taha", id: "UCIL3YfRG2k7V9EDC3jzy-kg" },
+	{
+		title: "Karim Mesallam — كريم مسلَّم",
+		id: "UCF8nUQJCIN5umZZn_IzLp-w",
+	},
+	{
+		title: "Mohamed Abusrea - محمد أبوسريع",
+		id: "UCJu5uNExWKx1Vrv6Ah5SHfA",
+	},
+	{ title: "Online Tutorials", id: "UCbwXnUipZsLfUckBPsC7Jog" },
+	{ title: "Kevin Powell", id: "UCJZv4d5rbIKd4QHMPkcABCw" },
+]
+
+export const subs = [
+	{ title: "عمر عبد الكافي", id: "UCKUOmGXE9Ytlc2EzpGqimtw" },
+	{ title: "Ali Muhammad Ali", id: "UChbuH4HULlesX_rzlozkT6Q" },
+	{ title: "وعي", id: "UC2qcjzOEX3lxE73cyroWdiw" },
+	{ title: "إنه القرآن", id: "UCCy0qwIz722Gi2MtjYlrQeg" },
+	{ title: "AJ+ كبريت", id: "UC-4KnPMmZzwAzW7SbVATUZQ" },
+	{ title: "دروس أونلاين", id: "UCEHvaZ336u7TIsUQ2c6SAeQ" },
+	{ title: "Elzero Web School", id: "UCSNkfKl4cU-55Nm-ovsvOHQ" },
+	{ title: "Omardizer | عمرديزر", id: "UC1FYFqgdW_1LueJTmXn-8cg" },
+	{ title: "سنكرة SANKARA", id: "UCNR623NFV3DbWpPTrA8cI_A" },
+	{ title: "MahmoudIsmailTV", id: "UCdttmnJddGQZsXRL_DbqgWA" },
+	{
+		title: "Ramzy Abdelaziz رمزي عبدالعزيز",
+		id: "UCn1CrIgAkpRpNXzH4z5h6zQ",
+	},
+	{ title: "Yehia Radwan يحيى رضوان", id: "UCVJMlu9ObMGjDBkpTZkwpRg" },
+	{
+		title: "المخبر الاقتصادي - Mokhbir Eqtisadi",
+		id: "UC4kRorAXuIkyIX6vwXKaLWg",
+	},
+	{
+		title: "غريب الشيخ || Ghareeb Elshaikh",
+		id: "UCnGblT_CyMwswTIH9QmJ3YQ",
+	},
+	{
+		title: "Codezilla CodeCast - بودكاست البرمجة",
+		id: "UCAxfpXysReI8eLc-rQ_yorw",
+	},
+	{ title: "Abouzaid Vlogs", id: "UCdNo5yauE8IU-vS8_dO3qew" },
+	{ title: "Kai Notebook", id: "UCNhWSOlt_UoCzS2YSMhHYmA" },
+	{ title: "Elzero Tube", id: "UCQqN3qgYbkfd0EkdhJmN5tQ" },
+	{ title: "Ahmed Amer", id: "UCah56qawts736uNxZA3inLQ" },
+	{ title: "قناة د محمد نوفل للشطرنج", id: "UCX6vJsr5GZtCQjt04x4r5nQ" },
+]

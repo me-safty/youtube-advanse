@@ -353,6 +353,9 @@ export interface Channel {
 		channelId: string
 	}
 	snippet: {
+		resourceId?: {
+			channelId: string
+		}
 		publishedAt: string
 		channelId: string
 		title: string

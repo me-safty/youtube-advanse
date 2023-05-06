@@ -1,6 +1,5 @@
-import Feed from "@/components/Feed"
 import { Video } from "@/typing"
-import subscriptions, { feed } from "@/lib/subscriptions"
+import subscriptions, { feed, subs } from "@/lib/subscriptions"
 import SubscriptionsFeed from "@/components/SubscriptionsFeed"
 import { ChannelsBar } from "@/components/ChannelsBar"
 
@@ -48,16 +47,25 @@ import { ChannelsBar } from "@/components/ChannelsBar"
 
 const channelIds = [
 	"UCKUOmGXE9Ytlc2EzpGqimtw",
-	"UCCy0qwIz722Gi2MtjYlrQeg",
-	"UCEHvaZ336u7TIsUQ2c6SAeQ",
-	"UC2qcjzOEX3lxE73cyroWdiw",
-	"UC4kRorAXuIkyIX6vwXKaLWg",
-	"UCdNo5yauE8IU-vS8_dO3qew",
-	"UCQqN3qgYbkfd0EkdhJmN5tQ",
-	"UCah56qawts736uNxZA3inLQ",
-	"UCF8nUQJCIN5umZZn_IzLp-w",
-	"UC-4KnPMmZzwAzW7SbVATUZQ",
-	"UCdttmnJddGQZsXRL_DbqgWA",
+	// "UChbuH4HULlesX_rzlozkT6Q",
+	// "UC2qcjzOEX3lxE73cyroWdiw",
+	// "UCCy0qwIz722Gi2MtjYlrQeg",
+	// "UC-4KnPMmZzwAzW7SbVATUZQ",
+
+	// "UCEHvaZ336u7TIsUQ2c6SAeQ",
+
+	// "UCSNkfKl4cU-55Nm-ovsvOHQ",
+
+	// "UC1FYFqgdW_1LueJTmXn-8cg",
+
+	// "UCNR623NFV3DbWpPTrA8cI_A",
+
+	// "UCdttmnJddGQZsXRL_DbqgWA",
+	// "UCn1CrIgAkpRpNXzH4z5h6zQ",
+	// "UCVJMlu9ObMGjDBkpTZkwpRg",
+	// "UC4kRorAXuIkyIX6vwXKaLWg",
+	// "UCAxfpXysReI8eLc-rQ_yorw",
+	// "UCdNo5yauE8IU-vS8_dO3qew",
 ]
 
 async function getData(channelId: string) {
@@ -75,7 +83,6 @@ async function getData(channelId: string) {
 				},
 			}
 		)
-
 		return res.json()
 	} catch (e) {
 		console.log(e)
@@ -332,35 +339,19 @@ const demoVideos: Video[] = [
 ]
 
 export default async function Home() {
-	// UCKUOmGXE9Ytlc2EzpGqimtw
-	// const getSubscriptionsData = await getData()
-	const subscriptionsData = channelIds.map((id) => getData(id))
+	const subscriptionsData = subs.map((sub) => getData(sub.id))
 	const data = await Promise.all(subscriptionsData)
 	// const channels = subscriptions.map((e) => e.meta)
 	const videos = data
 		// const videos = subscriptions
-		.map((e) => e.data.slice(0, 30))
+		.map((e) => e.data.slice(0, 10))
 		.flat()
 		.sort(
 			(a, b) =>
 				new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
 		)
-	// const videosPerChannelNum = subscriptions[0].data.length - 20
-	// const newData = channels.map((e, i) => ({
-	// 	meta: e,
-	// 	data: videos.slice(i * videosPerChannelNum, i + 1 * videosPerChannelNum),
-	// }))
-	// console.log(channels)
-	// console.log("||||||||||||||||||||||||||||||||||||")
-	// console.log(videos.length, "||||||||||||")
-	// const sortedData = subscriptions.sort((a, b) => a.)
 	return (
 		<>
-			{/* <div className="text-white">{JSON.stringify(data, null, 2)}</div> */}
-			{/* <Feed data={demoVideos} /> */}
-			{/* {newData.map((channel) => (
-				// <SubscriptionsFeed channel={channel} />
-			))} */}
 			{/* @ts-ignore */}
 			<ChannelsBar channels={feed.items} />
 			{/* @ts-ignore */}
