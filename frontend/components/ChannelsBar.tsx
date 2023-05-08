@@ -8,10 +8,7 @@ interface ChannelBarProps {
 export const ChannelsBar = ({ channels }: ChannelBarProps) => {
 	return (
 		<div className="container">
-			<div
-				style={{ scrollbarWidth: "thin", scrollbarColor: "#888 #f1f1f1" }}
-				className="py-3 my-1 flex gap-5 overflow-x-scroll [scrollbar-width:5px] [scrollbar-color:#888]"
-			>
+			<div className="py-3 my-1 flex gap-5 overflow-x-scroll">
 				{channels.map((channel) => (
 					<Link
 						key={channel.snippet.resourceId?.channelId}

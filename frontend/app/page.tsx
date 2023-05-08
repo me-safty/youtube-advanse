@@ -2,6 +2,7 @@ import { Video } from "@/typing"
 import subscriptions, { feed, subs } from "@/lib/subscriptions"
 import SubscriptionsFeed from "@/components/SubscriptionsFeed"
 import { ChannelsBar } from "@/components/ChannelsBar"
+import convertRelativeDateToMIleSeconds from "@/lib/convertRelativeDateToISODate"
 
 // async function getData() {
 // 	try {
@@ -45,41 +46,21 @@ import { ChannelsBar } from "@/components/ChannelsBar"
 // 	// )
 // }
 
-const channelIds = [
-	"UCKUOmGXE9Ytlc2EzpGqimtw",
-	// "UChbuH4HULlesX_rzlozkT6Q",
-	// "UC2qcjzOEX3lxE73cyroWdiw",
-	// "UCCy0qwIz722Gi2MtjYlrQeg",
-	// "UC-4KnPMmZzwAzW7SbVATUZQ",
-
-	// "UCEHvaZ336u7TIsUQ2c6SAeQ",
-
-	// "UCSNkfKl4cU-55Nm-ovsvOHQ",
-
-	// "UC1FYFqgdW_1LueJTmXn-8cg",
-
-	// "UCNR623NFV3DbWpPTrA8cI_A",
-
-	// "UCdttmnJddGQZsXRL_DbqgWA",
-	// "UCn1CrIgAkpRpNXzH4z5h6zQ",
-	// "UCVJMlu9ObMGjDBkpTZkwpRg",
-	// "UC4kRorAXuIkyIX6vwXKaLWg",
-	// "UCAxfpXysReI8eLc-rQ_yorw",
-	// "UCdNo5yauE8IU-vS8_dO3qew",
-]
-
 async function getData(channelId: string) {
 	try {
 		const res = await fetch(
-			`https://yt-api.p.rapidapi.com/channel/videos?id=${channelId}`,
+			// `https://yt-api.p.rapidapi.com/channel/videos?id=${channelId}`,
+			`https://youtube-v3-alternative.p.rapidapi.com/channel?id=${channelId}`,
 			{
-				next: { revalidate: 7000 },
+				next: { revalidate: 3600 },
 				method: "GET",
 				// @ts-ignore
 				headers: {
 					// "content-type": "application/octet-stream",
 					"X-RapidAPI-Key": process.env.RAPID_API_KEY,
-					"X-RapidAPI-Host": "yt-api.p.rapidapi.com",
+					"X-RapidAPI-Host": "youtube-v3-alternative.p.rapidapi.com",
+					// "X-RapidAPI-Host": "youtube-v31.p.rapidapi.com",
+					// "X-RapidAPI-Host": "yt-api.p.rapidapi.com",
 				},
 			}
 		)
@@ -342,16 +323,19 @@ export default async function Home() {
 	const subscriptionsData = subs.map((sub) => getData(sub.id))
 	const data = await Promise.all(subscriptionsData)
 	// const channels = subscriptions.map((e) => e.meta)
+	// const videos = subscriptions
 	const videos = data
-		// const videos = subscriptions
-		.map((e) => e.data.slice(0, 10))
+		.map((e) => e.data.slice(0, 3))
 		.flat()
 		.sort(
 			(a, b) =>
-				new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+				convertRelativeDateToMIleSeconds(b.publishedText) -
+				convertRelativeDateToMIleSeconds(a.publishedText)
 		)
+	console.log(videos)
 	return (
 		<>
+			{/* {JSON.stringify(videos, null, 2)} */}
 			{/* @ts-ignore */}
 			<ChannelsBar channels={feed.items} />
 			{/* @ts-ignore */}

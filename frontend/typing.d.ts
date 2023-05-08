@@ -1431,6 +1431,7 @@ export interface VideoSubscriptionsCard {
 	viewCount: string
 	publishedTimeText: string
 	publishedAt: string
+	publishedText: string
 	lengthText: string
 	thumbnail: [
 		{
@@ -1462,3 +1463,33 @@ export interface VideoSubscriptionsCard {
 		}
 	]
 }
+
+// export interface YtApiV31AlternativeVideo {
+// 	videoId: string
+// 	title: string
+// 	viewCount: string
+// 	publishedText: string
+// 	lengthText: string
+// 	thumbnail: [
+// 		{
+// 			url: string
+// 			width: number
+// 			height: number
+// 		},
+// 		{
+// 			url: string
+// 			width: number
+// 			height: number
+// 		},
+// 		{
+// 			url: string
+// 			width: number
+// 			height: number
+// 		},
+// 		{
+// 			url: string
+// 			width: number
+// 			height: number
+// 		}
+// 	]
+// }

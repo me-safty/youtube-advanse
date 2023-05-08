@@ -14,7 +14,7 @@ const SubscriptionsVideoCard = ({
 SubscriptionsVideoCardProps) => {
 	return (
 		<div className="w-full">
-			<Link href={`/videos/${video.videoId}`}>
+			<Link href={`/videos/${video.videoId}`} className="relative">
 				<Image
 					className="w-full object-cover h-[50vw] sm:h-[13vw] lg:h-[11vw]  rounded-xl"
 					src={video.thumbnail[3].url}
@@ -22,6 +22,9 @@ SubscriptionsVideoCardProps) => {
 					width={video.thumbnail[3].width || "480"}
 					height={video.thumbnail[3].height || "360"}
 				/>
+				<div className="py-1 px-2 rounded-md absolute bottom-2 left-2 bg-black bg-opacity-50">
+					<p className="text-white text-xs font-semibold">{video.lengthText}</p>
+				</div>
 			</Link>
 			<div className="flex gap-1 flex-row-reverse">
 				{/* <Link
@@ -64,7 +67,9 @@ SubscriptionsVideoCardProps) => {
 						</p>
 					</Link> */}
 					<p className="text-sm my-1 text-gray-400">
-						{getRelativeTime(video.publishedAt)}
+						{video.publishedAt
+							? getRelativeTime(video.publishedAt)
+							: video.publishedText}
 					</p>
 				</div>
 			</div>

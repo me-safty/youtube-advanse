@@ -9,7 +9,7 @@ const useInView = () => {
 			setIsVisible(entry.isIntersecting)
 		})
 		observer.observe(myRef.current as unknown as Element)
-	})
+	}, [])
 	return [myRef, isVisible]
 }
 

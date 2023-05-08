@@ -41,3 +41,19 @@ body {
 	}
 }
 /* container  */
+
+@keyframes skeleton-pulse {
+	0% {
+		background-color: rgba(200, 200, 200, 0.1);
+	}
+	50% {
+		background-color: rgba(161, 161, 161, 0.2);
+	}
+	100% {
+		background-color: rgba(200, 200, 200, 0.1);
+	}
+}
+
+.lodgingAnimation {
+	animation: skeleton-pulse 1.4s ease-in-out infinite;
+}
