@@ -1,4 +1,4 @@
-import { Video } from "@/typing"
+import { ChannelVideosForSubscriptions, Video } from "@/typing"
 import subscriptions, { feed, subs } from "@/lib/subscriptions"
 import SubscriptionsFeed from "@/components/SubscriptionsFeed"
 import { ChannelsBar } from "@/components/ChannelsBar"
@@ -321,11 +321,13 @@ const demoVideos: Video[] = [
 
 export default async function Home() {
 	const subscriptionsData = subs.map((sub) => getData(sub.id))
-	const data = await Promise.all(subscriptionsData)
+	const data: ChannelVideosForSubscriptions[] = await Promise.all(
+		subscriptionsData
+	)
 	// const channels = subscriptions.map((e) => e.meta)
 	// const videos = subscriptions
 	const videos = data
-		.map((e) => e.data?.slice(0, 3))
+		.map((e) => e.data.slice(0, 3))
 		.flat()
 		.sort(
 			(a, b) =>
@@ -335,10 +337,10 @@ export default async function Home() {
 	console.log(videos)
 	return (
 		<>
+			{/* @ts-ignore */}
 			{/* {JSON.stringify(videos, null, 2)} */}
 			{/* @ts-ignore */}
 			<ChannelsBar channels={feed.items} />
-			{/* @ts-ignore */}
 			<SubscriptionsFeed videos={videos} />
 		</>
 	)
