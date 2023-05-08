@@ -327,14 +327,13 @@ export default async function Home() {
 	// const channels = subscriptions.map((e) => e.meta)
 	// const videos = subscriptions
 	const videos = data
-		.map((e) => e.data.slice(0, 3))
+		.map((e) => e.data?.slice(0, 3))
 		.flat()
 		.sort(
 			(a, b) =>
 				convertRelativeDateToMIleSeconds(b.publishedText) -
 				convertRelativeDateToMIleSeconds(a.publishedText)
 		)
-	console.log(videos)
 	return (
 		<>
 			{/* @ts-ignore */}

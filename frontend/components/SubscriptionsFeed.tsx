@@ -14,7 +14,7 @@ const SubscriptionsFeed = ({ videos }: SubscriptionsFeedProps) => {
 				<div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 py-5 w-full">
 					{videos.map((video) => (
 						<SubscriptionsVideoCard
-							key={video.videoId}
+							key={video?.videoId}
 							video={video}
 							// channel={channel.meta}
 						/>
