@@ -2,7 +2,7 @@ import Feed from "@/components/Feed"
 import { notFound } from "next/navigation"
 
 async function getChannelPlaylists(channelId: string) {
-	const maxNum = 8
+	const maxNum = 40
 	const res = await fetch(
 		`https://youtube.googleapis.com/youtube/v3/playlists?part=snippet%2Cplayer%2CcontentDetails&channelId=${channelId}&maxResults=${maxNum}&key=${process.env.YOUTUBE_API_KEY}`,
 		{ next: { revalidate: 1000 } }
